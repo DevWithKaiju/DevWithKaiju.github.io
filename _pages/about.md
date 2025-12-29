@@ -63,6 +63,6 @@ Scholarships / Grants
 Key Certifications
 ------
 
-* Database Specialist (DB)
-* Applied Information Technology Engineer (AP)
-* Statistics Certification Grade 2
+* データベーススペシャリスト試験 合格
+* 応用情報技術者試験 合格
+* 統計検定 2級
