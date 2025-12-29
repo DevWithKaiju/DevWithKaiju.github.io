@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "ja-JP"
 site_theme               : "default" # the available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Your Name / Site Title"
+title                    : "吉川 芽生 / Mei Yoshikawa"
 title_separator          : "-"
 name                     : &name "吉川 芽生 / Mei Yoshikawa"
 description              : &description "Mei Yoshikawa's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
