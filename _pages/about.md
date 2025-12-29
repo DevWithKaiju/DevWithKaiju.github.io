@@ -58,3 +58,11 @@ Awards / Honors
 
 Scholarships / Grants
 ------ -->
+
+
+Key Certifications
+------
+
+* Database Specialist (DB)
+* Applied Information Technology Engineer (AP)
+* Statistics Certification Grade 2

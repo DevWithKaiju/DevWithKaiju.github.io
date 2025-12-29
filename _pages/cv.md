@@ -11,54 +11,23 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* High School, Tsuchiura Nihon University High School, 2020/3
+* B.S. in Pharmaceutical Sciences, The University of Tokyo, 2025/3
+* M.S. Student in Pharmaceutical Sciences, The University of Tokyo, 2027 (Expected)
 
-Work experience
+<!-- Work experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
-
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+*  -->
   
-Skills
+Certifications
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* **IT & Data Science**: Database Specialist (DB), Applied Information Technology Engineer (AP), Statistics Certification Grade 2
+* **Language**: EIKEN Test in Practical English Proficiency (Pre-1st Grade)
+* **Design**: Color Coordination Test Grade 2 & UC (Universal Color)
+* **Other**: Kendo 2nd Dan
 
 Publications
 ======
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
