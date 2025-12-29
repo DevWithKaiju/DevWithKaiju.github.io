@@ -9,7 +9,7 @@ redirect_from:
 
 吉川 芽生 / Mei Yoshikawa
 ------
-Mei Yoshikawa is a Master's student at the Graduate School of Pharmaceutical Sciences, University of Tokyo, under the supervision of Professor Hiroyuki Kusuhara. Her research interests lie at the intersection of pharmaceutical sciences and natural language processing (NLP). She is currently focusing on applying Large Language Models (LLMs) to extract cell-cell relationships from biomedical literature to accelerate data-driven drug discovery.
+Mei Yoshikawa is a Master's student at the Graduate School of Pharmaceutical Sciences, University of Tokyo, under the supervision of Professor Hiroyuki Kusuhara. Her research interests lie at the intersection of pharmaceutical sciences and natural language processing (NLP). She is currently focusing on applying Language Models to extract cell-cell relationships from biomedical literature to accelerate data-driven drug discovery.
 
 
 Education
@@ -21,7 +21,7 @@ Education
 Research Interests
 ------
 * Biomedical Natural Language Processing
-* Language Models (LLMs) application
+* Language Models application
 * Bioinformatics
 
 
