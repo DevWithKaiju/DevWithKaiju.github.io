@@ -1,0 +1,51 @@
+/* Custom Styles for Modern Academic Portfolio */
+
+/* Soft Shadows and Rounded Corners for Sidebar Profile */
+.author__avatar img {
+  border-radius: 50%;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.author__avatar img:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.author__urls-wrapper .btn {
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.author__urls-wrapper .btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Modernize links */
+a {
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+/* Add a subtle hover effect to page entries (like publications) */
+.list__item .archive__item {
+  padding: 1rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  border-bottom: 1px solid var(--global-border-color);
+}
+
+.list__item .archive__item:hover {
+  background-color: var(--global-code-background-color);
+  transform: translateX(4px);
+}
+
+/* Headings typography adjustments */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+html[data-theme="dark"] .author__avatar img {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
