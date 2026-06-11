@@ -85,6 +85,8 @@ title: ""
         <li><i class="fas fa-check-circle"></i> 統計検定 2級</li>
       </ul>
     </div>
+  </section>
+
   <section class="modern-section" markdown="0">
     <h2 class="section-title"><i class="fas fa-coffee"></i> Take a Break</h2>
     <div class="modern-card omikuji-card" onclick="drawOmikuji()">
