@@ -85,6 +85,60 @@ title: ""
         <li><i class="fas fa-check-circle"></i> 統計検定 2級</li>
       </ul>
     </div>
+  <section class="modern-section">
+    <h2 class="section-title"><i class="fas fa-coffee"></i> Take a Break</h2>
+    <div class="modern-card omikuji-card" onclick="drawOmikuji()">
+      <div class="omikuji-content">
+        <i class="fas fa-dice" style="font-size: 2.5rem; color: var(--global-link-color); margin-bottom: 1rem;"></i>
+        <h3 style="margin-top:0;">おみくじを引く</h3>
+        <p style="margin-bottom:0; color: var(--global-text-color-light);">クリックして今日の運勢を占ってみましょう！</p>
+      </div>
+    </div>
   </section>
 
 </div>
+
+<!-- Omikuji Modal -->
+<div id="omikuji-modal" class="omikuji-modal" onclick="closeOmikuji()">
+  <div class="omikuji-modal-content" onclick="event.stopPropagation()">
+    <button class="omikuji-close" onclick="closeOmikuji()"><i class="fas fa-times"></i></button>
+    <div id="omikuji-result-icon"></div>
+    <h2 id="omikuji-result-text"></h2>
+    <p id="omikuji-result-desc"></p>
+  </div>
+</div>
+
+<script>
+  const fortunes = [
+    { text: "大吉", icon: "🌸", desc: "最高の運勢！素晴らしい成果が出そうです。" },
+    { text: "吉", icon: "✨", desc: "良い一日になりそうです。自信を持って進みましょう。" },
+    { text: "中吉", icon: "🍀", desc: "コツコツ努力すると吉。着実に進展します。" },
+    { text: "小吉", icon: "🌱", desc: "小さな幸せが訪れるかも。リラックスして過ごしましょう。" },
+    { text: "末吉", icon: "⛅", desc: "焦らず待てば運が開けます。地道な作業に向いています。" }
+  ];
+
+  function drawOmikuji() {
+    const modal = document.getElementById('omikuji-modal');
+    const resultText = document.getElementById('omikuji-result-text');
+    const resultDesc = document.getElementById('omikuji-result-desc');
+    const resultIcon = document.getElementById('omikuji-result-icon');
+    
+    // Add simple shuffle animation effect
+    resultIcon.innerText = "🎲";
+    resultText.innerText = "シャッフル中...";
+    resultDesc.innerText = "";
+    modal.classList.add('show');
+    
+    setTimeout(() => {
+      const fortune = fortunes[Math.floor(Math.random() * fortunes.length)];
+      resultIcon.innerText = fortune.icon;
+      resultText.innerText = fortune.text;
+      resultDesc.innerText = fortune.desc;
+    }, 600);
+  }
+
+  function closeOmikuji() {
+    const modal = document.getElementById('omikuji-modal');
+    modal.classList.remove('show');
+  }
+</script>
