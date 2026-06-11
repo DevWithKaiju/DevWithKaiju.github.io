@@ -2,8 +2,6 @@
 layout: splash
 permalink: /
 title: ""
-header:
-  overlay_color: "linear-gradient(135deg, #31708E 0%, #1D4456 100%)"
 ---
 
 <div class="hero-container">

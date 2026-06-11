@@ -23,17 +23,18 @@ html[data-theme="dark"] .masthead {
 
 /* Hero Section */
 .hero-container {
+  background: linear-gradient(135deg, #31708E 0%, #1D4456 100%);
   text-align: center;
-  padding: 4rem 2rem;
-  margin-top: -3rem; /* overlap masthead padding if any */
-  margin-bottom: 2rem;
+  padding: 8rem 2rem 5rem 2rem;
+  margin-top: -4rem; /* Bring it under the masthead smoothly */
+  margin-bottom: 3rem;
   color: #fff;
-}
-
-/* Note: The overlay_color in front matter sets the background for page__hero,
-   but we want our hero-container to look good inside it. */
-
-.page__hero {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
