@@ -1,51 +1,286 @@
-/* Custom Styles for Modern Academic Portfolio */
+/* Custom Styles for Modern Splash Portfolio */
 
-/* Soft Shadows and Rounded Corners for Sidebar Profile */
-.author__avatar img {
+/* Override default Splash Layout padding */
+.splash {
+  margin-top: -2em; /* Bring closer to hero */
+}
+
+/* Glassmorphism Masthead (Navbar) */
+.masthead {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+html[data-theme="dark"] .masthead {
+  background: rgba(30, 41, 59, 0.85) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Hero Section */
+.hero-container {
+  text-align: center;
+  padding: 4rem 2rem;
+  margin-top: -3rem; /* overlap masthead padding if any */
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+/* Note: The overlay_color in front matter sets the background for page__hero,
+   but we want our hero-container to look good inside it. */
+
+.page__hero {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.hero-avatar {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 4px solid rgba(255,255,255,0.2);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
 }
 
-.author__avatar img:hover {
+.hero-avatar:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+.hero-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #fff !important;
+}
+
+.hero-name-en {
+  font-weight: 400;
+  font-size: 1.5rem;
+  opacity: 0.8;
+}
+
+.hero-bio {
+  max-width: 600px;
+  margin: 0 auto 1.5rem auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.hero-socials {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.hero-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  color: #fff !important;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  text-decoration: none;
+}
+
+.hero-social-link:hover {
+  background: rgba(255,255,255,0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Modern Content Wrapper */
+.modern-content-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem 4rem 1rem;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--global-link-color) !important;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(0,0,0,0.05);
+}
+
+html[data-theme="dark"] .section-title {
+  border-bottom-color: rgba(255,255,255,0.05);
+}
+
+.modern-section {
+  margin-bottom: 3rem;
+}
+
+/* Modern Cards */
+.modern-card {
+  background: var(--global-bg-color);
+  border-radius: 12px;
+  padding: 1.8rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  border: 1px solid var(--global-border-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modern-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
 }
 
-.author__urls-wrapper .btn {
-  border-radius: 8px;
+html[data-theme="dark"] .modern-card {
+  background: rgba(255,255,255,0.03);
+  border-color: rgba(255,255,255,0.08);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* Grid Layout for Conferences */
+.modern-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Item Cards */
+.item-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-meta {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--global-text-color-light);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.item-title {
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.item-authors {
+  font-size: 0.95rem;
+  margin: 0;
+  color: var(--global-text-color);
+  line-height: 1.5;
+}
+
+/* Tags / Pills */
+.tags-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.modern-tag {
+  background: rgba(49, 112, 142, 0.1);
+  color: var(--global-link-color);
+  padding: 0.5rem 1.2rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 1px solid rgba(49, 112, 142, 0.2);
   transition: all 0.2s ease;
+  display: inline-block;
 }
 
-.author__urls-wrapper .btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.modern-tag:hover {
+  background: var(--global-link-color);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(49, 112, 142, 0.2);
 }
 
-/* Modernize links */
+html[data-theme="dark"] .modern-tag {
+  background: rgba(56, 189, 248, 0.1);
+  color: #38BDF8;
+  border-color: rgba(56, 189, 248, 0.2);
+}
+
+html[data-theme="dark"] .modern-tag:hover {
+  background: #38BDF8;
+  color: #0f172a;
+}
+
+/* Timeline/List */
+.timeline-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline-list li {
+  display: flex;
+  margin-bottom: 1.2rem;
+  align-items: baseline;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px dashed rgba(0,0,0,0.1);
+}
+
+html[data-theme="dark"] .timeline-list li {
+  border-bottom-color: rgba(255,255,255,0.1);
+}
+
+.timeline-list li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.timeline-date {
+  font-weight: 700;
+  color: var(--global-link-color);
+  min-width: 80px;
+  margin-right: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.timeline-content {
+  font-size: 1.05rem;
+}
+
+.clean-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.clean-list li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.05rem;
+}
+
+.clean-list li i {
+  color: var(--global-link-color);
+  font-size: 1.2rem;
+}
+
+.clean-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Base Link Reset */
 a {
   transition: color 0.2s ease, text-decoration-color 0.2s ease;
-}
-
-/* Add a subtle hover effect to page entries (like publications) */
-.list__item .archive__item {
-  padding: 1rem;
-  border-radius: 8px;
-  transition: background-color 0.2s ease, transform 0.2s ease;
-  border-bottom: 1px solid var(--global-border-color);
-}
-
-.list__item .archive__item:hover {
-  background-color: var(--global-code-background-color);
-  transform: translateX(4px);
-}
-
-/* Headings typography adjustments */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-  letter-spacing: -0.02em;
-}
-
-html[data-theme="dark"] .author__avatar img {
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
 }
