@@ -1,4 +1,7 @@
 /* Custom Styles for Modern Splash Portfolio */
+body {
+  overflow-x: hidden;
+}
 
 /* Override default Splash Layout padding */
 .splash {
@@ -308,7 +311,7 @@ html[data-theme="dark"] .omikuji-card:hover {
 
 .omikuji-modal {
   position: fixed;
-  top: 0; left: 0; width: 100vw; height: 100vh;
+  top: 0; left: 0; width: 100%; height: 100%;
   background: rgba(0,0,0,0.4);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
