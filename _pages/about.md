@@ -89,7 +89,7 @@ title: ""
 
   <section class="modern-section" markdown="0">
     <h2 class="section-title"><i class="fas fa-coffee"></i> Take a Break</h2>
-    <div class="modern-card omikuji-card" onclick="drawOmikuji()">
+    <div class="modern-card omikuji-card" id="omikuji-trigger-btn">
       <div class="omikuji-content">
         <i class="fas fa-dice" style="font-size: 2.5rem; color: var(--global-link-color); margin-bottom: 1rem;"></i>
         <h3 style="margin-top:0;">おみくじを引く</h3>
@@ -101,9 +101,9 @@ title: ""
 </div>
 
 <!-- Omikuji Modal -->
-<div id="omikuji-modal" class="omikuji-modal" onclick="closeOmikuji()">
-  <div class="omikuji-modal-content" onclick="event.stopPropagation()">
-    <button class="omikuji-close" onclick="closeOmikuji()"><i class="fas fa-times"></i></button>
+<div id="omikuji-modal" class="omikuji-modal">
+  <div class="omikuji-modal-content" id="omikuji-modal-content">
+    <button class="omikuji-close" id="omikuji-close-btn"><i class="fas fa-times"></i></button>
     <div id="omikuji-result-icon"></div>
     <h2 id="omikuji-result-text"></h2>
     <p id="omikuji-result-desc"></p>
@@ -143,4 +143,32 @@ title: ""
     const modal = document.getElementById('omikuji-modal');
     modal.classList.remove('show');
   }
+
+  // Attach event listeners after DOM is loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    const triggerBtn = document.getElementById('omikuji-trigger-btn');
+    if (triggerBtn) {
+      triggerBtn.addEventListener('click', drawOmikuji);
+    }
+    
+    const modal = document.getElementById('omikuji-modal');
+    if (modal) {
+      modal.addEventListener('click', closeOmikuji);
+    }
+    
+    const modalContent = document.getElementById('omikuji-modal-content');
+    if (modalContent) {
+      modalContent.addEventListener('click', function(e) {
+        e.stopPropagation(); // Prevent closing when clicking inside the modal
+      });
+    }
+    
+    const closeBtn = document.getElementById('omikuji-close-btn');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        closeOmikuji();
+      });
+    }
+  });
 </script>
