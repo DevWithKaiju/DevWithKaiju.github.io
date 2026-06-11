@@ -51,9 +51,6 @@ html[data-theme="dark"] .masthead {
   transition: transform 0.3s ease;
 }
 
-.hero-avatar:hover {
-  transform: translateY(-5px) scale(1.02);
-}
 
 .hero-name {
   font-size: 2.5rem;
@@ -139,10 +136,6 @@ html[data-theme="dark"] .section-title {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.modern-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-}
 
 html[data-theme="dark"] .modern-card {
   background: rgba(255,255,255,0.03);
@@ -206,12 +199,6 @@ html[data-theme="dark"] .modern-card {
   display: inline-block;
 }
 
-.modern-tag:hover {
-  background: var(--global-link-color);
-  color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(49, 112, 142, 0.2);
-}
 
 html[data-theme="dark"] .modern-tag {
   background: rgba(56, 189, 248, 0.1);
@@ -219,10 +206,6 @@ html[data-theme="dark"] .modern-tag {
   border-color: rgba(56, 189, 248, 0.2);
 }
 
-html[data-theme="dark"] .modern-tag:hover {
-  background: #38BDF8;
-  color: #0f172a;
-}
 
 /* Timeline/List */
 .timeline-list {
@@ -289,89 +272,3 @@ a {
   transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 
-/* Omikuji Feature */
-.omikuji-card {
-  cursor: pointer;
-  text-align: center;
-  background: linear-gradient(135deg, rgba(49,112,142,0.05) 0%, rgba(29,68,86,0.05) 100%);
-  border: 2px dashed rgba(49,112,142,0.2);
-}
-html[data-theme="dark"] .omikuji-card {
-  background: linear-gradient(135deg, rgba(56,189,248,0.05) 0%, rgba(14,165,233,0.05) 100%);
-  border-color: rgba(56,189,248,0.2);
-}
-.omikuji-card:hover {
-  transform: translateY(-5px) scale(1.02);
-  border-color: var(--global-link-color);
-  background: linear-gradient(135deg, rgba(49,112,142,0.1) 0%, rgba(29,68,86,0.1) 100%);
-}
-html[data-theme="dark"] .omikuji-card:hover {
-  background: linear-gradient(135deg, rgba(56,189,248,0.1) 0%, rgba(14,165,233,0.1) 100%);
-}
-
-.omikuji-modal {
-  position: fixed;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: rgba(0,0,0,0.4);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  z-index: 10000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-}
-.omikuji-modal.show {
-  opacity: 1;
-  visibility: visible;
-}
-.omikuji-modal-content {
-  background: var(--global-bg-color);
-  padding: 3rem 2rem;
-  border-radius: 20px;
-  text-align: center;
-  max-width: 400px;
-  width: 90%;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-  transform: scale(0.8) translateY(20px);
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  position: relative;
-  border: 1px solid var(--global-border-color);
-}
-.omikuji-modal.show .omikuji-modal-content {
-  transform: scale(1) translateY(0);
-}
-.omikuji-close {
-  position: absolute;
-  top: 15px; right: 15px;
-  background: none; border: none;
-  font-size: 1.5rem; cursor: pointer;
-  color: var(--global-text-color-light);
-  transition: color 0.2s;
-}
-.omikuji-close:hover {
-  color: var(--danger-color);
-}
-#omikuji-result-icon {
-  font-size: 5rem;
-  margin-bottom: 1rem;
-  animation: bounce 2s infinite;
-}
-#omikuji-result-text {
-  font-size: 2.5rem;
-  color: var(--global-link-color);
-  margin-bottom: 0.5rem;
-  margin-top: 0;
-}
-#omikuji-result-desc {
-  font-size: 1.1rem;
-  color: var(--global-text-color);
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-  40% {transform: translateY(-20px);}
-  60% {transform: translateY(-10px);}
-}
