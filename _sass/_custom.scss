@@ -1,6 +1,33 @@
-/* Custom Styles for Modern Splash Portfolio */
+/* Custom Styles for Modern Splash Portfolio - Purple Theme */
+:root {
+  --primary-color: #8b5cf6;       /* Violet 500 */
+  --primary-color-dark: #7c3aed;  /* Violet 600 */
+  --primary-color-light: #f3e8ff; /* Violet 100 */
+  --global-link-color: #8b5cf6;
+  --global-bg-color: #ffffff;
+  --global-text-color: #334155;
+  --global-text-color-light: #64748b;
+  --global-border-color: #f1f5f9;
+  --hero-bg-gradient: linear-gradient(135deg, #f8fafc 0%, #ede9fe 100%);
+  --hero-text-color: #1e293b;
+}
+
+html[data-theme="dark"] {
+  --primary-color: #a78bfa;       /* Violet 400 */
+  --primary-color-dark: #c4b5fd;  /* Violet 300 */
+  --primary-color-light: #4c1d95; /* Violet 900 */
+  --global-link-color: #a78bfa;
+  --global-bg-color: #0f172a;
+  --global-text-color: #e2e8f0;
+  --global-text-color-light: #94a3b8;
+  --global-border-color: #1e293b;
+  --hero-bg-gradient: linear-gradient(135deg, #0f172a 0%, #2e1065 100%);
+  --hero-text-color: #f8fafc;
+}
+
 body {
   overflow-x: hidden;
+  color: var(--global-text-color);
 }
 
 /* Override default Splash Layout padding */
@@ -10,67 +37,66 @@ body {
 
 /* Glassmorphism Masthead (Navbar) */
 .masthead {
-  background: rgba(255, 255, 255, 0.85) !important;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: none !important; /* Remove harsh border for unified look */
+  box-shadow: 0 1px 0 rgba(0,0,0,0.02); /* Very subtle line */
   position: sticky;
   top: 0;
   z-index: 9999;
 }
 
 html[data-theme="dark"] .masthead {
-  background: rgba(30, 41, 59, 0.85) !important;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  background: rgba(15, 23, 42, 0.7) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.02);
 }
 
 /* Hero Section */
 .hero-container {
-  background: linear-gradient(135deg, #31708E 0%, #1D4456 100%);
+  background: var(--hero-bg-gradient);
   text-align: center;
-  padding: 8rem 2rem 5rem 2rem;
+  padding: 6rem 2rem 4rem 2rem; /* Reduced padding for a smarter look */
   margin-top: -4rem; /* Bring it under the masthead smoothly */
   margin-bottom: 3rem;
-  color: #fff;
+  color: var(--hero-text-color);
   width: 100vw;
   position: relative;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .hero-avatar {
-  width: 150px;
-  height: 150px;
+  width: 130px; /* Slightly smaller */
+  height: 130px;
   border-radius: 50%;
-  border: 4px solid rgba(255,255,255,0.2);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  border: 2px solid rgba(139, 92, 246, 0.2); /* Subtle purple ring */
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.15); /* Soft purple shadow */
   margin-bottom: 1.5rem;
-  transition: transform 0.3s ease;
 }
 
-
 .hero-name {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color: #fff !important;
+  color: var(--hero-text-color) !important;
+  letter-spacing: -0.02em;
 }
 
 .hero-name-en {
   font-weight: 400;
-  font-size: 1.5rem;
-  opacity: 0.8;
+  font-size: 1.4rem;
+  color: var(--global-text-color-light);
 }
 
 .hero-bio {
   max-width: 600px;
   margin: 0 auto 1.5rem auto;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  opacity: 0.9;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--global-text-color);
 }
 
 .hero-socials {
@@ -83,47 +109,52 @@ html[data-theme="dark"] .masthead {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 45px;
-  height: 45px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.15);
-  color: #fff !important;
+  background: var(--global-bg-color);
+  color: var(--primary-color) !important;
   font-size: 1.2rem;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(5px);
+  transition: all 0.2s ease;
   text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border: 1px solid var(--global-border-color);
 }
 
 .hero-social-link:hover {
-  background: rgba(255,255,255,0.3);
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  background: var(--primary-color);
+  color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(139, 92, 246, 0.2);
+}
+
+html[data-theme="dark"] .hero-social-link {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.1);
 }
 
 /* Modern Content Wrapper */
 .modern-content-wrapper {
-  max-width: 900px;
+  max-width: 850px; /* Slightly narrower for readability */
   margin: 0 auto;
   padding: 0 1rem 4rem 1rem;
 }
 
 .section-title {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-weight: 700;
   margin-bottom: 1.5rem;
-  color: var(--global-link-color) !important;
+  color: var(--hero-text-color) !important;
   display: flex;
   align-items: center;
   gap: 0.8rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid var(--global-border-color);
 }
 
-html[data-theme="dark"] .section-title {
-  border-bottom-color: rgba(255,255,255,0.05);
-}
-
-.modern-section {
-  margin-bottom: 3rem;
+.section-title i {
+  color: var(--primary-color);
+  font-size: 1.4rem;
 }
 
 /* Modern Cards */
@@ -131,15 +162,12 @@ html[data-theme="dark"] .section-title {
   background: var(--global-bg-color);
   border-radius: 12px;
   padding: 1.8rem;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
   border: 1px solid var(--global-border-color);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-
 html[data-theme="dark"] .modern-card {
-  background: rgba(255,255,255,0.03);
-  border-color: rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.02);
   box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
 
@@ -160,17 +188,18 @@ html[data-theme="dark"] .modern-card {
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--global-text-color-light);
+  color: var(--primary-color);
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
 .item-title {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   margin-top: 0;
   margin-bottom: 0.8rem;
   line-height: 1.5;
   font-weight: 600;
+  color: var(--hero-text-color);
 }
 
 .item-authors {
@@ -188,24 +217,19 @@ html[data-theme="dark"] .modern-card {
 }
 
 .modern-tag {
-  background: rgba(49, 112, 142, 0.1);
-  color: var(--global-link-color);
-  padding: 0.5rem 1.2rem;
+  background: var(--primary-color-light);
+  color: var(--primary-color-dark);
+  padding: 0.4rem 1rem;
   border-radius: 30px;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  border: 1px solid rgba(49, 112, 142, 0.2);
-  transition: all 0.2s ease;
   display: inline-block;
 }
 
-
 html[data-theme="dark"] .modern-tag {
-  background: rgba(56, 189, 248, 0.1);
-  color: #38BDF8;
-  border-color: rgba(56, 189, 248, 0.2);
+  background: rgba(167, 139, 250, 0.15);
+  color: #c4b5fd;
 }
-
 
 /* Timeline/List */
 .timeline-list {
@@ -219,11 +243,7 @@ html[data-theme="dark"] .modern-tag {
   margin-bottom: 1.2rem;
   align-items: baseline;
   padding-bottom: 1.2rem;
-  border-bottom: 1px dashed rgba(0,0,0,0.1);
-}
-
-html[data-theme="dark"] .timeline-list li {
-  border-bottom-color: rgba(255,255,255,0.1);
+  border-bottom: 1px dashed var(--global-border-color);
 }
 
 .timeline-list li:last-child {
@@ -234,14 +254,15 @@ html[data-theme="dark"] .timeline-list li {
 
 .timeline-date {
   font-weight: 700;
-  color: var(--global-link-color);
+  color: var(--primary-color);
   min-width: 80px;
   margin-right: 1.5rem;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
 .timeline-content {
   font-size: 1.05rem;
+  color: var(--global-text-color);
 }
 
 .clean-list {
@@ -256,10 +277,11 @@ html[data-theme="dark"] .timeline-list li {
   align-items: center;
   gap: 0.8rem;
   font-size: 1.05rem;
+  color: var(--global-text-color);
 }
 
 .clean-list li i {
-  color: var(--global-link-color);
+  color: var(--primary-color);
   font-size: 1.2rem;
 }
 
@@ -270,5 +292,8 @@ html[data-theme="dark"] .timeline-list li {
 /* Base Link Reset */
 a {
   transition: color 0.2s ease, text-decoration-color 0.2s ease;
+  color: var(--global-link-color);
 }
-
+a:hover {
+  color: var(--primary-color-dark);
+}
