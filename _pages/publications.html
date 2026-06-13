@@ -20,8 +20,12 @@ permalink: /publications/
             </div>
           {% endif %}
           <div class="item-meta">{{ post.venue }}, {{ post.date | date: "%Y" }}</div>
-          <h3 class="item-title" style="font-size: 1.2rem;">{{ post.title }}</h3>
-          <p class="item-authors" style="font-size: 0.95rem; margin-bottom: 0;">{{ post.citation | strip_html | truncatewords: 20 }}</p>
+          <h3 class="item-title" style="font-size: 1.2rem; margin-bottom: 0.3rem;">{{ post.title }}</h3>
+          {% if post.authors %}
+            <p class="item-authors" style="font-size: 0.95rem; margin-bottom: 0; color: var(--global-text-color);">{{ post.authors }}</p>
+          {% else %}
+            <p class="item-authors" style="font-size: 0.95rem; margin-bottom: 0;">{{ post.citation | strip_html | truncatewords: 20 }}</p>
+          {% endif %}
           <p style="font-size: 0.95rem; color: var(--global-text-color-light); margin-top: 0.5rem;">{{ post.excerpt | strip_html }}</p>
           {% if post.paperurl %}
             <a href="{{ post.paperurl }}" target="_blank" rel="noopener noreferrer" style="font-size: 0.9rem; font-weight: 500; display: inline-flex; align-items: center; gap: 0.3rem;"><i class="fas fa-external-link-alt"></i> Paper Link</a>
