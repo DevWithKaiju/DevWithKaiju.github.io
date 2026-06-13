@@ -142,8 +142,13 @@ title: ""
   <section class="modern-section">
     <h2 class="section-title"><i class="fas fa-award"></i> Scholarships & Grants</h2>
     <div class="modern-card">
-      <ul class="clean-list">
-        <li><span style="display:inline-block; width: 80px; color: var(--primary-color); font-weight: 500;">2022-</span> 東京大学さつき会奨学金（島村昭次郎記念口）</li>
+      <ul class="timeline-list">
+        <li>
+          <div class="timeline-date">2022-</div>
+          <div class="timeline-content">
+            <strong>東京大学さつき会奨学金（島村昭次郎記念口）</strong>
+          </div>
+        </li>
       </ul>
     </div>
   </section>
