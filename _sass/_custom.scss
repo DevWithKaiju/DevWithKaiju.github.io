@@ -489,8 +489,8 @@ html[data-theme="dark"] .page__footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
+  align-items: flex-end; /* Right aligned */
+  gap: 0.5rem; /* Narrow gap */
   max-width: 850px;
   margin: 0 auto;
 }
@@ -498,10 +498,20 @@ html[data-theme="dark"] .page__footer {
 .page__footer-copyright {
   font-family: 'Outfit', 'Noto Sans JP', sans-serif !important;
   font-size: 0.9rem;
-  color: var(--global-text-color-light) !important;
+  color: var(--primary-color) !important; /* Light purple */
   font-weight: 300;
   letter-spacing: 0.03em;
   margin: 0;
+}
+
+.page__footer-copyright a {
+  color: var(--primary-color) !important;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.page__footer-copyright a:hover {
+  color: var(--accent-color) !important; /* Mint hover */
 }
 
 .footer-links {
@@ -511,7 +521,7 @@ html[data-theme="dark"] .page__footer {
 }
 
 .footer-links a {
-  color: var(--global-text-color-light) !important;
+  color: var(--primary-color) !important; /* Light purple */
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;
