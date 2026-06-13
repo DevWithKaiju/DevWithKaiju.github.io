@@ -47,19 +47,34 @@ body {
   margin-top: 0;
 }
 
-/* Glassmorphism Masthead (Navbar) - Fixed Padding & Scroll */
+/* Glassmorphism Masthead (Navbar) - Sticky & Fixed */
 .masthead {
-  background: transparent !important;
-  border-bottom: none !important;
-  position: static !important; /* Overrides sticky behavior */
-  padding-top: 0 !important; /* Reduce top padding */
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+  position: sticky !important; 
+  top: 0 !important;
+  z-index: 9999 !important;
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  transform: none !important; /* Disable any hide-on-scroll animations */
 }
+
+html[data-theme="dark"] .masthead {
+  background: rgba(19, 17, 21, 0.85) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+}
+
 .masthead__inner-wrap {
   padding-top: 0.5rem !important; 
   padding-bottom: 0.5rem !important;
 }
 
 /* Masthead Link Hover */
+.masthead__menu-item a {
+  font-weight: 400 !important; /* Thinner menu links */
+}
 .masthead__menu-item a:hover {
   color: var(--primary-color) !important;
 }
@@ -124,14 +139,14 @@ html[data-theme="dark"] .background-blob {
 .hero-name {
   font-family: 'Outfit', 'Noto Sans JP', sans-serif;
   font-size: 2.2rem;
-  font-weight: 600;
+  font-weight: 500; /* Thinned out from 600 */
   margin-bottom: 0.5rem;
   color: var(--global-text-color) !important;
   letter-spacing: -0.02em;
 }
 
 .hero-name-en {
-  font-weight: 400;
+  font-weight: 300; /* Thinned out */
   font-size: 1.2rem;
   color: var(--global-text-color-light);
 }
@@ -195,7 +210,7 @@ html[data-theme="dark"] .hero-social-link {
 .section-title {
   font-family: 'Outfit', 'Noto Sans JP', sans-serif;
   font-size: 1.6rem;
-  font-weight: 600;
+  font-weight: 500; /* Thinned out from 600 */
   margin-bottom: 2rem;
   color: var(--global-text-color) !important;
   display: flex;
@@ -209,6 +224,7 @@ html[data-theme="dark"] .hero-social-link {
   color: var(--primary-color);
   font-size: 1.4rem;
   opacity: 0.9;
+  font-weight: 400;
 }
 
 /* Modern Cards - Diffuse Shadows & Borderless */
@@ -247,7 +263,7 @@ html[data-theme="dark"] .modern-card {
   letter-spacing: 0.05em;
   color: var(--accent-color); /* Mint green accent */
   margin-bottom: 0.8rem;
-  font-weight: 500;
+  font-weight: 400; /* Thinned out from 500 */
 }
 
 .item-title {
@@ -256,7 +272,7 @@ html[data-theme="dark"] .modern-card {
   margin-top: 0;
   margin-bottom: 0.8rem;
   line-height: 1.5;
-  font-weight: 600;
+  font-weight: 500; /* Thinned out from 600 */
   color: var(--global-text-color);
 }
 
@@ -265,6 +281,7 @@ html[data-theme="dark"] .modern-card {
   margin: 0;
   color: var(--global-text-color-light);
   line-height: 1.6;
+  font-weight: 300;
 }
 
 /* Tags / Pills */
@@ -280,7 +297,7 @@ html[data-theme="dark"] .modern-card {
   padding: 0.4rem 1rem;
   border-radius: 30px;
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 400; /* Thinned out from 500 */
   display: inline-block;
   transition: all 0.2s ease;
 }
@@ -321,7 +338,7 @@ html[data-theme="dark"] .modern-tag:hover {
 }
 
 .timeline-date {
-  font-weight: 600;
+  font-weight: 500; /* Thinned out */
   color: var(--primary-color);
   min-width: 90px;
   margin-right: 1.5rem;
@@ -333,6 +350,7 @@ html[data-theme="dark"] .modern-tag:hover {
   font-size: 1rem;
   color: var(--global-text-color);
   line-height: 1.6;
+  font-weight: 300;
 }
 
 .clean-list {
@@ -348,6 +366,7 @@ html[data-theme="dark"] .modern-tag:hover {
   gap: 1rem;
   font-size: 1rem;
   color: var(--global-text-color);
+  font-weight: 300;
 }
 
 .clean-list li i {
