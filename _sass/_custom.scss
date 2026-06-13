@@ -412,13 +412,14 @@ a:hover {
   font-weight: 300;
   margin: 0;
   padding: 0;
-  align-items: start;
-  font-size: 1.05rem;
+  align-items: baseline; /* Fixed alignment */
+  font-size: 1.05rem; /* Larger font */
 }
 .cert-grid-title {
   font-weight: 500;
   color: var(--primary-color);
   text-align: left;
+  line-height: 1.5;
 }
 .cert-grid-title::after {
   content: " :";
@@ -426,6 +427,8 @@ a:hover {
 }
 .cert-grid-desc {
   color: var(--global-text-color);
+  font-weight: 400;
+  line-height: 1.5;
 }
 @media (max-width: 600px) {
   .cert-grid {
@@ -490,8 +493,8 @@ html[data-theme="dark"] .page__footer {
    Footer Updates
    ========================================================= */
 .page__footer {
-  background-color: var(--primary-color) !important;
-  color: white !important;
+  background-color: rgba(179, 156, 208, 0.15) !important; /* Lighter purple */
+  color: var(--global-text-color) !important; /* Body text color */
   padding-top: 2rem !important;
   padding-bottom: 2rem !important;
   border-top: none !important;
@@ -510,21 +513,21 @@ html[data-theme="dark"] .page__footer {
 .page__footer-copyright {
   font-family: 'Outfit', 'Noto Sans JP', sans-serif !important;
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: var(--global-text-color) !important;
   font-weight: 300;
   letter-spacing: 0.03em;
   margin: 0;
 }
 
 .page__footer-copyright a {
-  color: white !important;
+  color: var(--global-text-color) !important;
   text-decoration: none;
   font-weight: 500;
   transition: all 0.2s ease;
 }
 
 .page__footer-copyright a:hover {
-  color: var(--accent-color) !important; /* Mint hover */
+  color: var(--primary-color) !important; /* Purple hover */
 }
 
 .footer-links {
@@ -534,7 +537,7 @@ html[data-theme="dark"] .page__footer {
 }
 
 .footer-links a {
-  color: white !important;
+  color: var(--global-text-color) !important;
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;
@@ -542,7 +545,7 @@ html[data-theme="dark"] .page__footer {
 }
 
 .footer-links a:hover {
-  color: var(--accent-color) !important;
+  color: var(--primary-color) !important;
 }
 
 /* =========================================================
@@ -623,6 +626,18 @@ html[data-theme="dark"] .page__footer {
 
 .author__urls a:hover i {
   color: white;
+}
+
+/* Fix sidebar overlapping footer on short pages */
+#main {
+  min-height: 80vh;
+}
+
+/* Ensure tags don't wrap on PC */
+@media (min-width: 1024px) {
+  .tags-card {
+    flex-wrap: nowrap !important;
+  }
 }
 
 .footer-links a:hover {
