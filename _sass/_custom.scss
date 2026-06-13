@@ -61,7 +61,7 @@ body {
   padding-top: 0 !important;
   margin-top: 0 !important;
   transform: none !important; /* Disable any hide-on-scroll animations */
-  overflow: hidden; /* Prevent margin collapse from children */
+  padding-top: 0.1px !important; /* Prevent margin collapse without hiding overflow */
 }
 
 html[data-theme="dark"] .masthead {
