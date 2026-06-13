@@ -393,3 +393,38 @@ a {
 a:hover {
   color: var(--primary-color-dark);
 }
+
+/* =========================================================
+   Global Sub-Page (Single Layout) Tone & Manner 
+   ========================================================= */
+.page__inner-wrap {
+  background: var(--global-bg-color) !important;
+  border-radius: 18px !important; 
+  padding: 3rem !important; 
+  box-shadow: 0 8px 30px -5px rgba(0,0,0,0.05) !important; 
+  border: none !important;
+  max-width: 850px !important;
+  margin: 0 auto !important;
+  margin-top: 2rem !important;
+}
+
+html[data-theme="dark"] .page__inner-wrap {
+  background: rgba(255,255,255,0.02) !important;
+  box-shadow: 0 8px 30px -5px rgba(0,0,0,0.3) !important;
+  border: 1px solid rgba(255,255,255,0.05) !important; 
+}
+
+.page__title {
+  font-family: 'Outfit', 'Noto Sans JP', sans-serif !important;
+  font-size: 2.2rem !important;
+  font-weight: 500 !important;
+  color: var(--global-text-color) !important;
+  margin-bottom: 2rem !important;
+  border-bottom: 1px dashed var(--global-border-color) !important;
+  padding-bottom: 1rem !important;
+}
+
+/* Force huge gap above footer globally */
+.page__footer {
+  margin-top: 8rem !important; 
+}
