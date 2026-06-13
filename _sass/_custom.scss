@@ -407,12 +407,13 @@ a:hover {
 /* Cert Grid */
 .cert-grid {
   display: grid;
-  grid-template-columns: 180px auto;
-  gap: 0.8rem 1rem;
+  grid-template-columns: 200px auto;
+  gap: 1rem 1.5rem;
   font-weight: 300;
   margin: 0;
   padding: 0;
   align-items: start;
+  font-size: 1.05rem;
 }
 .cert-grid-title {
   font-weight: 500;
@@ -485,6 +486,17 @@ html[data-theme="dark"] .page__footer {
   border-top: 1px solid rgba(255,255,255,0.05) !important;
 }
 
+/* =========================================================
+   Footer Updates
+   ========================================================= */
+.page__footer {
+  background-color: var(--primary-color) !important;
+  color: white !important;
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+  border-top: none !important;
+}
+
 .footer-inner {
   display: flex;
   flex-direction: column;
@@ -498,15 +510,16 @@ html[data-theme="dark"] .page__footer {
 .page__footer-copyright {
   font-family: 'Outfit', 'Noto Sans JP', sans-serif !important;
   font-size: 0.9rem;
-  color: var(--primary-color) !important; /* Light purple */
+  color: rgba(255, 255, 255, 0.9) !important;
   font-weight: 300;
   letter-spacing: 0.03em;
   margin: 0;
 }
 
 .page__footer-copyright a {
-  color: var(--primary-color) !important;
+  color: white !important;
   text-decoration: none;
+  font-weight: 500;
   transition: all 0.2s ease;
 }
 
@@ -521,11 +534,95 @@ html[data-theme="dark"] .page__footer {
 }
 
 .footer-links a {
-  color: var(--primary-color) !important; /* Light purple */
+  color: white !important;
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;
   transition: all 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent-color) !important;
+}
+
+/* =========================================================
+   Sidebar Author Profile (Kawaii Redesign)
+   ========================================================= */
+.author__profile {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 10px 30px -5px rgba(179, 156, 208, 0.2);
+  text-align: center;
+  border: 2px solid rgba(179, 156, 208, 0.1);
+  margin-top: 1rem;
+}
+
+.author__avatar img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 4px solid var(--accent-color);
+  padding: 4px;
+  background: white;
+  margin: 0 auto 1rem;
+  box-shadow: 0 4px 15px rgba(45, 212, 191, 0.2);
+}
+
+.author__name {
+  font-family: 'Outfit', 'Noto Sans JP', sans-serif !important;
+  font-size: 1.4rem !important;
+  font-weight: 600 !important;
+  color: var(--primary-color) !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.author__bio {
+  font-size: 0.95rem;
+  color: var(--global-text-color);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.author__urls {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.author__urls li {
+  margin-bottom: 0.6rem !important;
+  list-style-type: none !important;
+}
+
+.author__urls a {
+  display: block;
+  color: var(--global-text-color) !important;
+  font-size: 0.95rem;
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  background: rgba(179, 156, 208, 0.08); /* Faint purple */
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.author__urls a:hover {
+  background: var(--primary-color) !important;
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(179, 156, 208, 0.3);
+}
+
+.author__urls a i {
+  color: var(--accent-color);
+  width: 20px;
+  text-align: center;
+  margin-right: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.author__urls a:hover i {
+  color: white;
 }
 
 .footer-links a:hover {
