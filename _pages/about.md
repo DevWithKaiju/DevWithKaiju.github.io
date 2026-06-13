@@ -96,28 +96,28 @@ title: ""
           <div class="timeline-date">2025/12</div>
           <div class="timeline-content">
             <strong><a href="https://www.senkyo.co.jp/iyakudokuken/8th_sapporo/index.html" target="_blank" rel="noopener noreferrer" class="hover-link">言語モデルを用いた生物医学論文からの細胞間相互作用抽出の検討</a></strong><br>
-            <span class="text-light">Oral / 第8回医薬品毒性機序研究会 (北海道・ハイブリッド)</span>
+            <span class="text-light"><span class="badge badge-oral">Oral</span> 第8回医薬品毒性機序研究会 (北海道・ハイブリッド)</span>
           </div>
         </li>
         <li>
           <div class="timeline-date">2025/9</div>
           <div class="timeline-content">
             <strong><a href="https://ycps.jp/19/" target="_blank" rel="noopener noreferrer" class="hover-link">言語AIを用いた細胞-細胞関係性情報構造化の検討</a></strong><br>
-            <span class="text-light">Poster / 第19回次世代を担う若手のための医療薬科学シンポジウム (京都)</span>
+            <span class="text-light"><span class="badge badge-poster">Poster</span> 第19回次世代を担う若手のための医療薬科学シンポジウム (京都)</span>
           </div>
         </li>
         <li>
           <div class="timeline-date">2025/9</div>
           <div class="timeline-content">
             <strong><a href="https://www.jsbi.org/iibmp2025/" target="_blank" rel="noopener noreferrer" class="hover-link">細胞間関係性の俯瞰に向けた言語モデルによる細胞間関係性抽出の検討</a></strong><br>
-            <span class="text-light">Poster / 2025年日本バイオインフォマティクス学会年会 (名古屋)</span>
+            <span class="text-light"><span class="badge badge-poster">Poster</span> 2025年日本バイオインフォマティクス学会年会 (名古屋)</span>
           </div>
         </li>
         <li>
           <div class="timeline-date">2025/3</div>
           <div class="timeline-content">
             <strong><a href="https://pub.confit.atlas.jp/ja/event/pharm145" target="_blank" rel="noopener noreferrer" class="hover-link">細胞間関係性の俯瞰に向けた言語モデルによる免疫細胞関係性抽出の検討</a></strong><br>
-            <span class="text-light">Poster / 日本薬学会第145年会 (福岡)</span>
+            <span class="text-light"><span class="badge badge-poster">Poster</span> 日本薬学会第145年会 (福岡)</span>
           </div>
         </li>
       </ul>

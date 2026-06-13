@@ -57,7 +57,7 @@ header:
         <div class="timeline-date">YYYY/MM</div>
         <div class="timeline-content">
           <strong><a href="発表のリンクがあればここに入力" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">ここに発表のタイトルを入力</a></strong><br>
-          <span style="color: var(--global-text-color-light);">発表形式（Oral / Posterなど） / ここに学会名を入力 (開催地)</span>
+          <span class="text-light"><span class="badge badge-oral">Oral</span> ここに学会名を入力 (開催地)</span>
         </div>
       </li>
 ```

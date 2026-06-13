@@ -698,6 +698,25 @@ html[data-theme="dark"] .page__footer {
   color: var(--accent-color);
 }
 
+/* Badges for Oral/Poster */
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-right: 0.4rem;
+  line-height: 1.2;
+}
+.badge-oral {
+  background-color: var(--accent-color);
+  color: white;
+}
+.badge-poster {
+  background-color: var(--primary-color);
+  color: white;
+}
+
 /* Tag parts for line wrapping */
 .tag-part {
   display: inline-block;
