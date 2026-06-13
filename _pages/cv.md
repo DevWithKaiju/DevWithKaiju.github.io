@@ -43,7 +43,7 @@ classes: custom-cv-page wide
 <section class="modern-section">
   <h2 class="section-title"><i class="fas fa-certificate"></i> 資格 (Certifications)</h2>
   <div class="modern-card">
-    <ul class="timeline-list">
+    <ul class="timeline-list certifications-list">
       <li>
         <div class="timeline-date">IT & データサイエンス</div>
         <div class="timeline-content">データベーススペシャリスト試験 合格, 応用情報技術者試験 合格, 統計検定 2級</div>

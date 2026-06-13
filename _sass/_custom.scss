@@ -370,6 +370,10 @@ html[data-theme="dark"] .modern-tag:hover {
   font-family: 'Outfit', sans-serif;
 }
 
+.certifications-list .timeline-date {
+  min-width: 180px;
+}
+
 .timeline-content {
   font-size: 1rem;
   color: var(--global-text-color);
