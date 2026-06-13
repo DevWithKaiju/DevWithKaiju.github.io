@@ -1,38 +1,18 @@
 ---
-layout: archive
+layout: single
 title: "Projects"
 permalink: /projects/
 author_profile: true
 ---
 
-Under construction.
-
-<!-- {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
-{% include base_path %}
-
-# New style rendering if publication categories are defined
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %} -->
-
-
+<section class="modern-section" style="margin-top: 2rem;">
+  <div class="modern-card" style="text-align: center; padding: 4rem 2rem;">
+    <i class="fas fa-paint-roller" style="font-size: 4rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+    <h2 style="color: var(--primary-color); margin-bottom: 1rem;">Under Construction</h2>
+    <p style="color: var(--global-text-color);">現在準備中です！公開までもう少しお待ちください🐾</p>
+    <a href="{{ '/' | relative_url }}" class="gallery-link" style="margin-top: 1.5rem; display: inline-block;">
+      <i class="fas fa-home"></i> トップページへ戻る &rarr;
+    </a>
+  </div>
+</section>
 

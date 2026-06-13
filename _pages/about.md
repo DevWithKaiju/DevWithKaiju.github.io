@@ -127,8 +127,19 @@ title: ""
   <section class="modern-section">
     <h2 class="section-title"><i class="fas fa-hands-helping"></i> Activities</h2>
     <div class="modern-card">
-      <ul class="clean-list">
-        <li><span style="display:inline-block; width: 80px; color: var(--primary-color); font-weight: 500;">2026/10</span> 第20回次世代を担う若手のための医療薬科学シンポジウム 若手交流会 オーガナイザー（予定）</li>
+      <ul class="clean-list" style="display: flex; flex-direction: column; gap: 0.8rem;">
+        <li style="display: flex; gap: 0.5rem; align-items: flex-start;">
+          <span style="min-width: 80px; color: var(--primary-color); font-weight: 500;">2026/10</span>
+          <span style="line-height: 1.5;">第20回次世代を担う若手のための医療薬科学シンポジウム<br>若手交流会 オーガナイザー（予定）</span>
+        </li>
+        <li style="display: flex; gap: 0.5rem; align-items: flex-start;">
+          <span style="min-width: 80px; color: var(--primary-color); font-weight: 500;">2025/3</span>
+          <span style="line-height: 1.5;">東京大学 薬学部 薬科学科 卒業生代表</span>
+        </li>
+        <li style="display: flex; gap: 0.5rem; align-items: flex-start;">
+          <span style="min-width: 80px; color: var(--primary-color); font-weight: 500;">2025/3</span>
+          <span style="line-height: 1.5;">東京大学 薬学部長賞</span>
+        </li>
       </ul>
     </div>
   </section>
