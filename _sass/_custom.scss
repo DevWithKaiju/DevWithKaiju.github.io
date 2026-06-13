@@ -1,28 +1,24 @@
-/* Custom Styles for Modern Splash Portfolio - Purple Theme */
+/* Custom Styles for Modern Splash Portfolio - Wisteria Theme */
 :root {
-  --primary-color: #8b5cf6;       /* Violet 500 */
-  --primary-color-dark: #7c3aed;  /* Violet 600 */
-  --primary-color-light: #f3e8ff; /* Violet 100 */
-  --global-link-color: #8b5cf6;
+  --primary-color: #89729e;       /* Traditional Wisteria (藤色) */
+  --primary-color-dark: #5c4772;  /* Deep Wisteria */
+  --primary-color-light: #ece6f0; /* Very light Wisteria tint */
+  --global-link-color: #89729e;
   --global-bg-color: #ffffff;
   --global-text-color: #334155;
   --global-text-color-light: #64748b;
   --global-border-color: #f1f5f9;
-  --hero-bg-gradient: linear-gradient(135deg, #f8fafc 0%, #ede9fe 100%);
-  --hero-text-color: #1e293b;
 }
 
 html[data-theme="dark"] {
-  --primary-color: #a78bfa;       /* Violet 400 */
-  --primary-color-dark: #c4b5fd;  /* Violet 300 */
-  --primary-color-light: #4c1d95; /* Violet 900 */
-  --global-link-color: #a78bfa;
-  --global-bg-color: #0f172a;
+  --primary-color: #a794b9;       /* Lighter Wisteria for dark mode readability */
+  --primary-color-dark: #d5cde0;  /* Very bright Wisteria */
+  --primary-color-light: #3f314d; /* Deep Wisteria background tint */
+  --global-link-color: #a794b9;
+  --global-bg-color: #131115;     /* Slightly tinted very dark grey/purple */
   --global-text-color: #e2e8f0;
   --global-text-color-light: #94a3b8;
-  --global-border-color: #1e293b;
-  --hero-bg-gradient: linear-gradient(135deg, #0f172a 0%, #2e1065 100%);
-  --hero-text-color: #f8fafc;
+  --global-border-color: #27222c;
 }
 
 body {
@@ -32,48 +28,38 @@ body {
 
 /* Override default Splash Layout padding */
 .splash {
-  margin-top: -2em; /* Bring closer to hero */
+  margin-top: 0;
 }
 
-/* Glassmorphism Masthead (Navbar) */
+/* Glassmorphism Masthead (Navbar) - No longer sticky */
 .masthead {
-  background: rgba(255, 255, 255, 0.7) !important;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: none !important; /* Remove harsh border for unified look */
-  box-shadow: 0 1px 0 rgba(0,0,0,0.02); /* Very subtle line */
-  position: sticky;
-  top: 0;
-  z-index: 9999;
+  background: transparent !important;
+  border-bottom: none !important;
+  position: relative !important; /* Overrides any sticky behavior */
 }
 
-html[data-theme="dark"] .masthead {
-  background: rgba(15, 23, 42, 0.7) !important;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.02);
-}
-
-/* Hero Section */
+/* Hero Section - Simplified and Quiet */
 .hero-container {
-  background: var(--hero-bg-gradient);
+  background: transparent;
   text-align: center;
-  padding: 6rem 2rem 4rem 2rem; /* Reduced padding for a smarter look */
-  margin-top: -4rem; /* Bring it under the masthead smoothly */
+  padding: 4rem 2rem 2rem 2rem;
+  margin-top: 0;
   margin-bottom: 3rem;
-  color: var(--hero-text-color);
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  color: var(--global-text-color);
+  width: auto;
+  position: static;
+  left: auto;
+  right: auto;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .hero-avatar {
-  width: 130px; /* Slightly smaller */
+  width: 130px;
   height: 130px;
   border-radius: 50%;
-  border: 2px solid rgba(139, 92, 246, 0.2); /* Subtle purple ring */
-  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.15); /* Soft purple shadow */
+  border: 1px solid var(--global-border-color);
+  box-shadow: 0 4px 15px rgba(137, 114, 158, 0.1); /* Very soft wisteria shadow */
   margin-bottom: 1.5rem;
 }
 
@@ -81,7 +67,7 @@ html[data-theme="dark"] .masthead {
   font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color: var(--hero-text-color) !important;
+  color: var(--global-text-color) !important;
   letter-spacing: -0.02em;
 }
 
@@ -117,15 +103,12 @@ html[data-theme="dark"] .masthead {
   font-size: 1.2rem;
   transition: all 0.2s ease;
   text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   border: 1px solid var(--global-border-color);
 }
 
 .hero-social-link:hover {
-  background: var(--primary-color);
-  color: #fff !important;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(139, 92, 246, 0.2);
+  background: var(--primary-color-light);
+  color: var(--primary-color-dark) !important;
 }
 
 html[data-theme="dark"] .hero-social-link {
@@ -135,7 +118,7 @@ html[data-theme="dark"] .hero-social-link {
 
 /* Modern Content Wrapper */
 .modern-content-wrapper {
-  max-width: 850px; /* Slightly narrower for readability */
+  max-width: 850px;
   margin: 0 auto;
   padding: 0 1rem 4rem 1rem;
 }
@@ -144,7 +127,7 @@ html[data-theme="dark"] .hero-social-link {
   font-size: 1.6rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  color: var(--hero-text-color) !important;
+  color: var(--global-text-color) !important;
   display: flex;
   align-items: center;
   gap: 0.8rem;
@@ -162,13 +145,13 @@ html[data-theme="dark"] .hero-social-link {
   background: var(--global-bg-color);
   border-radius: 12px;
   padding: 1.8rem;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.02);
   border: 1px solid var(--global-border-color);
 }
 
 html[data-theme="dark"] .modern-card {
   background: rgba(255,255,255,0.02);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 /* Grid Layout for Conferences */
@@ -199,7 +182,7 @@ html[data-theme="dark"] .modern-card {
   margin-bottom: 0.8rem;
   line-height: 1.5;
   font-weight: 600;
-  color: var(--hero-text-color);
+  color: var(--global-text-color);
 }
 
 .item-authors {
@@ -224,11 +207,13 @@ html[data-theme="dark"] .modern-card {
   font-size: 0.95rem;
   font-weight: 600;
   display: inline-block;
+  border: 1px solid rgba(137, 114, 158, 0.1);
 }
 
 html[data-theme="dark"] .modern-tag {
-  background: rgba(167, 139, 250, 0.15);
-  color: #c4b5fd;
+  background: var(--primary-color-light);
+  color: var(--primary-color-dark);
+  border-color: rgba(167, 148, 185, 0.2);
 }
 
 /* Timeline/List */
