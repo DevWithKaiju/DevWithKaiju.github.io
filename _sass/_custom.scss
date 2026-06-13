@@ -398,23 +398,21 @@ a:hover {
 /* Cert Grid */
 .cert-grid {
   display: grid;
-  grid-template-columns: 180px auto;
+  grid-template-columns: 220px auto;
   gap: 0.8rem 1rem;
   font-weight: 300;
   margin: 0;
   padding: 0;
+  align-items: start;
 }
 .cert-grid-title {
   font-weight: 500;
   color: var(--primary-color);
-  text-align: right;
-  position: relative;
+  text-align: left;
 }
 .cert-grid-title::after {
-  content: ":";
-  position: absolute;
-  right: -0.5rem;
-  color: var(--global-text-color-light);
+  content: " :";
+  color: var(--global-border-color);
 }
 .cert-grid-desc {
   color: var(--global-text-color);
@@ -423,12 +421,17 @@ a:hover {
   .cert-grid {
     grid-template-columns: 1fr;
   }
-  .cert-grid-title {
-    text-align: left;
-  }
-  .cert-grid-title::after {
-    display: none;
-  }
+}
+
+/* Custom CV Page Layout Reset */
+.custom-cv-page .page__inner-wrap {
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin-top: 0 !important;
+}
+.custom-cv-page .page__title {
+  display: none !important;
 }
 
 /* =========================================================
@@ -478,10 +481,10 @@ html[data-theme="dark"] .page__footer {
 
 .footer-inner {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
   max-width: 850px;
   margin: 0 auto;
 }
