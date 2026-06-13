@@ -27,7 +27,7 @@ author:
   name             : "Mei Yoshikawa"
   pronouns         : # example: "she/her"  
   bio              : "Master's student @ The University of Tokyo, Pharmaceutical Sciences"
-  location         : ""
+  # location         : ""
   employer         : 
   uri              : # URL
   email            : "lion.giraffe.may.2525@gmail.com" 
