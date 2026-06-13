@@ -73,15 +73,17 @@ title: ""
       <ul class="clean-list" style="display: flex; flex-direction: column; gap: 0.8rem;">
         {% for post in site.publications reversed %}
         <li style="align-items: flex-start; gap: 0.5rem; border-bottom: 1px dashed var(--global-border-color); padding-bottom: 0.8rem;">
-        <span style="color: var(--primary-color); font-weight: 500; min-width: 50px;">{{ post.date | date: "%Y" }}</span>
-        <span style="line-height: 1.5; color: var(--global-text-color);">
-          {{ post.citation | strip_html }}
+        <span style="color: var(--primary-color); font-weight: 500; min-width: 50px; margin-top: 2px;">{{ post.date | date: "%Y" }}</span>
+        <span style="line-height: 1.5;">
+          <strong><a href="{{ post.paperurl | default: '#' }}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='inherit'">{{ post.title }}</a></strong><br>
+          {% if post.authors %}<span style="color: var(--global-text-color-light);">{{ post.authors }}</span><br>{% endif %}
+          {% if post.venue %}<span style="color: var(--primary-color); font-weight: 500;"><em>{{ post.venue }}</em></span>{% endif %}
         </span>
       </li>
         {% endfor %}
       </ul>
       <div style="text-align: right; margin-top: 1rem;">
-        <a href="{{ '/publications/' | relative_url }}" style="font-size: 0.95rem; font-weight: 500; color: var(--accent-color); text-decoration: none;"><i class="fas fa-images"></i> ギャラリー表示はこちら &rarr;</a>
+        <a href="{{ '/publications/' | relative_url }}" class="gallery-link"><i class="fas fa-images"></i> ギャラリー表示はこちら &rarr;</a>
       </div>
     </div>
   </section>
@@ -93,28 +95,28 @@ title: ""
         <li>
           <div class="timeline-date">2025/12</div>
           <div class="timeline-content">
-            <strong><a href="#" style="text-decoration: none; color: inherit;">言語モデルを用いた生物医学論文からの細胞間相互作用抽出の検討</a></strong><br>
+            <strong><a href="https://www.senkyo.co.jp/iyakudokuken/8th_sapporo/index.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='inherit'">言語モデルを用いた生物医学論文からの細胞間相互作用抽出の検討</a></strong><br>
             <span style="color: var(--global-text-color-light);">Oral / 第8回医薬品毒性機序研究会 (北海道・ハイブリッド)</span>
           </div>
         </li>
         <li>
           <div class="timeline-date">2025/9</div>
           <div class="timeline-content">
-            <strong><a href="#" style="text-decoration: none; color: inherit;">言語AIを用いた細胞-細胞関係性情報構造化の検討</a></strong><br>
+            <strong><a href="https://ycps.jp/19/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='inherit'">言語AIを用いた細胞-細胞関係性情報構造化の検討</a></strong><br>
             <span style="color: var(--global-text-color-light);">Poster / 第19回次世代を担う若手のための医療薬科学シンポジウム (京都)</span>
           </div>
         </li>
         <li>
           <div class="timeline-date">2025/9</div>
           <div class="timeline-content">
-            <strong><a href="#" style="text-decoration: none; color: inherit;">細胞間関係性の俯瞰に向けた言語モデルによる細胞間関係性抽出の検討</a></strong><br>
+            <strong><a href="https://www.jsbi.org/iibmp2025/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='inherit'">細胞間関係性の俯瞰に向けた言語モデルによる細胞間関係性抽出の検討</a></strong><br>
             <span style="color: var(--global-text-color-light);">Poster / 2025年日本バイオインフォマティクス学会年会 (名古屋)</span>
           </div>
         </li>
         <li>
           <div class="timeline-date">2025/3</div>
           <div class="timeline-content">
-            <strong><a href="#" style="text-decoration: none; color: inherit;">細胞間関係性の俯瞰に向けた言語モデルによる免疫細胞関係性抽出の検討</a></strong><br>
+            <strong><a href="https://pub.confit.atlas.jp/ja/event/pharm145" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='inherit'">細胞間関係性の俯瞰に向けた言語モデルによる免疫細胞関係性抽出の検討</a></strong><br>
             <span style="color: var(--global-text-color-light);">Poster / 日本薬学会第145年会 (福岡)</span>
           </div>
         </li>

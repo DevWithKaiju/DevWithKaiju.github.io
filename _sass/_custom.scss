@@ -644,6 +644,20 @@ html[data-theme="dark"] .page__footer {
   min-height: 80vh;
 }
 
+/* Gallery Link */
+.gallery-link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--accent-color);
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.gallery-link:hover {
+  color: var(--primary-color);
+  transform: translateX(4px);
+}
+
 /* Ensure tags don't wrap on PC */
 @media (min-width: 1024px) {
   .tags-card {

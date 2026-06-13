@@ -65,9 +65,11 @@ classes: custom-cv-page wide
     <ul class="clean-list" style="display: flex; flex-direction: column; gap: 0.8rem;">
       {% for post in site.publications reversed %}
       <li style="align-items: flex-start; gap: 0.5rem; border-bottom: 1px dashed var(--global-border-color); padding-bottom: 0.8rem;">
-        <span style="color: var(--primary-color); font-weight: 500; min-width: 50px;">{{ post.date | date: "%Y" }}</span>
-        <span style="line-height: 1.5; color: var(--global-text-color);">
-          {{ post.citation | strip_html }}
+        <span style="color: var(--primary-color); font-weight: 500; min-width: 50px; margin-top: 2px;">{{ post.date | date: "%Y" }}</span>
+        <span style="line-height: 1.5;">
+          <strong><a href="{{ post.paperurl | default: '#' }}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='inherit'">{{ post.title }}</a></strong><br>
+          {% if post.authors %}<span style="color: var(--global-text-color-light);">{{ post.authors }}</span><br>{% endif %}
+          {% if post.venue %}<span style="color: var(--primary-color); font-weight: 500;"><em>{{ post.venue }}</em></span>{% endif %}
         </span>
       </li>
       {% endfor %}
