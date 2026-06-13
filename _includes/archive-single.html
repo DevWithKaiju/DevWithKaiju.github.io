@@ -15,15 +15,15 @@
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     {% if post.collection == 'publications' %}
-      <div class="modern-card" style="margin-bottom: 1.5rem; padding: 1.5rem; box-shadow: 0 4px 15px rgba(179, 156, 208, 0.1);">
-        <div style="color: var(--primary-color); font-weight: 500; margin-bottom: 0.5rem; font-size: 0.95rem;">{{ post.date | date: "%Y" }}</div>
+      <div class="archive-list-card">
+        <div class="archive-list-date">{{ post.date | date: "%Y" }}</div>
         <div style="line-height: 1.5;">
-          <h2 class="archive__item-title" itemprop="headline" style="font-size: 1.15rem; margin-top: 0; margin-bottom: 0.5rem;">
-            <a href="{{ post.paperurl | default: post.url }}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='inherit'">{{ title }}</a>
+          <h2 class="archive-list-title" itemprop="headline">
+            <a href="{{ post.paperurl | default: post.url }}" target="_blank" rel="noopener noreferrer" class="hover-link">{{ title }}</a>
           </h2>
-          {% if post.authors %}<div style="color: var(--global-text-color-light); font-size: 0.95rem; margin-bottom: 0.3rem;">{{ post.authors }}</div>{% endif %}
-          {% if post.venue %}<div style="color: var(--primary-color); font-weight: 500; font-size: 0.95rem; margin-bottom: 0.8rem;"><em>{{ post.venue }}</em></div>{% endif %}
-          {% if post.excerpt %}<div class="archive__item-excerpt" itemprop="description" style="font-size: 0.95rem;">{{ post.excerpt | markdownify }}</div>{% endif %}
+          {% if post.authors %}<div class="archive-list-authors">{{ post.authors }}</div>{% endif %}
+          {% if post.venue %}<div class="archive-list-venue"><em>{{ post.venue }}</em></div>{% endif %}
+          {% if post.excerpt %}<div class="archive-list-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</div>{% endif %}
         </div>
       </div>
     {% else %}

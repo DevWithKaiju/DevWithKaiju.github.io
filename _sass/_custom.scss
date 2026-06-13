@@ -675,4 +675,160 @@ html[data-theme="dark"] .page__footer {
 
 .footer-links a:hover {
   color: var(--accent-color) !important;
+/* -------------------------------------
+ * Refactored Utility & Component Classes
+ * ------------------------------------- */
+
+/* Text colors */
+.text-light {
+  color: var(--global-text-color-light);
 }
+.text-primary {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+/* Links inside timeline and cards */
+.hover-link {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+.hover-link:hover {
+  color: var(--accent-color);
+}
+
+/* Tag parts for line wrapping */
+.tag-part {
+  display: inline-block;
+}
+
+/* Publication archive grid components */
+.pub-header {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+  border-bottom: 1px dashed var(--global-border-color);
+  padding-bottom: 1rem;
+}
+.pub-grid-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.pub-thumbnail-container {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+.pub-thumbnail-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+.pub-title-grid {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+.pub-authors-grid {
+  font-size: 0.95rem;
+  margin-bottom: 0;
+  color: var(--global-text-color);
+}
+.pub-excerpt-grid {
+  font-size: 0.95rem;
+  color: var(--global-text-color-light);
+  margin-top: 0.5rem;
+}
+.pub-paper-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  text-decoration: none;
+}
+
+/* Modern buttons for single layout */
+.modern-btn-wrapper {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+.modern-btn {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.modern-btn:hover {
+  transform: translateY(-2px);
+}
+.modern-btn-primary {
+  background: var(--primary-color);
+  color: white;
+}
+.modern-btn-primary:hover {
+  box-shadow: 0 4px 10px rgba(179, 156, 208, 0.3);
+  color: white;
+}
+.modern-btn-accent {
+  background: var(--accent-color);
+  color: white;
+}
+.modern-btn-accent:hover {
+  box-shadow: 0 4px 10px rgba(45, 212, 191, 0.3);
+  color: white;
+}
+.modern-btn-outline {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+/* Authors card in single layout */
+.pub-authors-card {
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  background: rgba(179, 156, 208, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(179, 156, 208, 0.2);
+}
+
+/* Archive single (Home page / generic lists) */
+.archive-list-card {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(179, 156, 208, 0.1);
+}
+.archive-list-date {
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+.archive-list-title {
+  font-size: 1.15rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+.archive-list-authors {
+  color: var(--global-text-color-light);
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+.archive-list-venue {
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+}
+.archive-list-excerpt {
+  font-size: 0.95rem;
+}
+

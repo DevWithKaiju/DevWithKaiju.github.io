@@ -14,7 +14,7 @@ classes: custom-cv-page wide
     <ul class="timeline-list">
       <li>
         <div class="timeline-date">2025/4-</div>
-        <div class="timeline-content"><strong>東京大学 大学院薬学系研究科 修士課程</strong> <br><span style="color: var(--global-text-color-light);">分子薬物動態学教室</span></div>
+        <div class="timeline-content"><strong>東京大学 大学院薬学系研究科 修士課程</strong> <br><span class="text-light">分子薬物動態学教室</span></div>
       </li>
       <li>
         <div class="timeline-date">2025/3</div>
@@ -72,8 +72,8 @@ classes: custom-cv-page wide
       <li style="align-items: flex-start; gap: 0.5rem; border-bottom: 1px dashed var(--global-border-color); padding-bottom: 0.8rem;">
         <span style="color: var(--primary-color); font-weight: 500; min-width: 50px; margin-top: 2px;">{{ post.date | date: "%Y" }}</span>
         <span style="line-height: 1.5;">
-          <strong><a href="{{ post.paperurl | default: '#' }}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='inherit'">{{ post.title }}</a></strong><br>
-          {% if post.authors %}<span style="color: var(--global-text-color-light);">{{ post.authors }}</span><br>{% endif %}
+          <strong><a href="{{ post.paperurl | default: '#' }}" target="_blank" rel="noopener noreferrer" class="hover-link">{{ post.title }}</a></strong><br>
+          {% if post.authors %}<span class="text-light">{{ post.authors }}</span><br>{% endif %}
           {% if post.venue %}<span style="color: var(--primary-color); font-weight: 500;"><em>{{ post.venue }}</em></span>{% endif %}
         </span>
       </li>

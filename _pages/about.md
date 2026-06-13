@@ -31,7 +31,7 @@ title: ""
       <ul class="timeline-list">
         <li>
           <div class="timeline-date">2025/4-</div>
-          <div class="timeline-content"><strong>東京大学 大学院薬学系研究科 修士課程</strong> <br><span style="color: var(--global-text-color-light);">分子薬物動態学教室</span></div>
+          <div class="timeline-content"><strong>東京大学 大学院薬学系研究科 修士課程</strong> <br><span class="text-light">分子薬物動態学教室</span></div>
         </li>
         <li>
           <div class="timeline-date">2025/3</div>
@@ -52,8 +52,8 @@ title: ""
   <section class="modern-section">
     <h2 class="section-title"><i class="fas fa-laptop-code"></i> Skills</h2>
     <div class="modern-card tags-card">
-      <span class="modern-tag"><span style="display: inline-block;">Python</span> <span style="display: inline-block;">(データ解析・機械学習・NLP)</span></span>
-      <a href="https://www.mizuno-group.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;"><span class="modern-tag"><span style="display: inline-block;">Web 開発</span> <span style="display: inline-block;">(研究室ウェブサイト制作)</span></span></a>
+      <span class="modern-tag"><span class="tag-part">Python</span> <span class="tag-part">(データ解析・機械学習・NLP)</span></span>
+      <a href="https://www.mizuno-group.com/" target="_blank" rel="noopener noreferrer" class="hover-link"><span class="modern-tag"><span class="tag-part">Web 開発</span> <span class="tag-part">(研究室ウェブサイト制作)</span></span></a>
     </div>
   </section>
 
@@ -75,8 +75,8 @@ title: ""
         <li style="align-items: flex-start; gap: 0.5rem; border-bottom: 1px dashed var(--global-border-color); padding-bottom: 0.8rem;">
         <span style="color: var(--primary-color); font-weight: 500; min-width: 50px; margin-top: 2px;">{{ post.date | date: "%Y" }}</span>
         <span style="line-height: 1.5;">
-          <strong><a href="{{ post.paperurl | default: '#' }}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='inherit'">{{ post.title }}</a></strong><br>
-          {% if post.authors %}<span style="color: var(--global-text-color-light);">{{ post.authors }}</span><br>{% endif %}
+          <strong><a href="{{ post.paperurl | default: '#' }}" target="_blank" rel="noopener noreferrer" class="hover-link">{{ post.title }}</a></strong><br>
+          {% if post.authors %}<span class="text-light">{{ post.authors }}</span><br>{% endif %}
           {% if post.venue %}<span style="color: var(--primary-color); font-weight: 500;"><em>{{ post.venue }}</em></span>{% endif %}
         </span>
       </li>
@@ -95,29 +95,29 @@ title: ""
         <li>
           <div class="timeline-date">2025/12</div>
           <div class="timeline-content">
-            <strong><a href="https://www.senkyo.co.jp/iyakudokuken/8th_sapporo/index.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='inherit'">言語モデルを用いた生物医学論文からの細胞間相互作用抽出の検討</a></strong><br>
-            <span style="color: var(--global-text-color-light);">Oral / 第8回医薬品毒性機序研究会 (北海道・ハイブリッド)</span>
+            <strong><a href="https://www.senkyo.co.jp/iyakudokuken/8th_sapporo/index.html" target="_blank" rel="noopener noreferrer" class="hover-link">言語モデルを用いた生物医学論文からの細胞間相互作用抽出の検討</a></strong><br>
+            <span class="text-light">Oral / 第8回医薬品毒性機序研究会 (北海道・ハイブリッド)</span>
           </div>
         </li>
         <li>
           <div class="timeline-date">2025/9</div>
           <div class="timeline-content">
-            <strong><a href="https://ycps.jp/19/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='inherit'">言語AIを用いた細胞-細胞関係性情報構造化の検討</a></strong><br>
-            <span style="color: var(--global-text-color-light);">Poster / 第19回次世代を担う若手のための医療薬科学シンポジウム (京都)</span>
+            <strong><a href="https://ycps.jp/19/" target="_blank" rel="noopener noreferrer" class="hover-link">言語AIを用いた細胞-細胞関係性情報構造化の検討</a></strong><br>
+            <span class="text-light">Poster / 第19回次世代を担う若手のための医療薬科学シンポジウム (京都)</span>
           </div>
         </li>
         <li>
           <div class="timeline-date">2025/9</div>
           <div class="timeline-content">
-            <strong><a href="https://www.jsbi.org/iibmp2025/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='inherit'">細胞間関係性の俯瞰に向けた言語モデルによる細胞間関係性抽出の検討</a></strong><br>
-            <span style="color: var(--global-text-color-light);">Poster / 2025年日本バイオインフォマティクス学会年会 (名古屋)</span>
+            <strong><a href="https://www.jsbi.org/iibmp2025/" target="_blank" rel="noopener noreferrer" class="hover-link">細胞間関係性の俯瞰に向けた言語モデルによる細胞間関係性抽出の検討</a></strong><br>
+            <span class="text-light">Poster / 2025年日本バイオインフォマティクス学会年会 (名古屋)</span>
           </div>
         </li>
         <li>
           <div class="timeline-date">2025/3</div>
           <div class="timeline-content">
-            <strong><a href="https://pub.confit.atlas.jp/ja/event/pharm145" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='inherit'">細胞間関係性の俯瞰に向けた言語モデルによる免疫細胞関係性抽出の検討</a></strong><br>
-            <span style="color: var(--global-text-color-light);">Poster / 日本薬学会第145年会 (福岡)</span>
+            <strong><a href="https://pub.confit.atlas.jp/ja/event/pharm145" target="_blank" rel="noopener noreferrer" class="hover-link">細胞間関係性の俯瞰に向けた言語モデルによる免疫細胞関係性抽出の検討</a></strong><br>
+            <span class="text-light">Poster / 日本薬学会第145年会 (福岡)</span>
           </div>
         </li>
       </ul>
@@ -132,7 +132,7 @@ title: ""
           <div class="timeline-date">2026/10</div>
           <div class="timeline-content">
             <strong>第20回次世代を担う若手のための医療薬科学シンポジウム</strong><br>
-            <span style="color: var(--global-text-color-light);">若手交流会 オーガナイザー（予定）</span>
+            <span class="text-light">若手交流会 オーガナイザー（予定）</span>
           </div>
         </li>
       </ul>
