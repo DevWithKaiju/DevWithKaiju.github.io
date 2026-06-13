@@ -53,7 +53,7 @@ title: ""
     <h2 class="section-title"><i class="fas fa-laptop-code"></i> Skills</h2>
     <div class="modern-card tags-card">
       <span class="modern-tag">Python (データ解析・機械学習・NLP)</span>
-      <span class="modern-tag">Web 開発 (研究室ウェブサイト制作)</span>
+      <a href="https://www.mizuno-group.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;"><span class="modern-tag">Web 開発 (研究室ウェブサイト制作)</span></a>
     </div>
   </section>
 
@@ -95,7 +95,7 @@ title: ""
           <div class="timeline-date">2025/12</div>
           <div class="timeline-content">
             <strong>言語モデルを用いた生物医学論文からの細胞間相互作用抽出の検討</strong><br>
-            <span style="color: var(--global-text-color-light); font-size: 0.95rem;">Oral / 第8回医薬品毒性機序研究会 (北海道)</span>
+            <span style="color: var(--global-text-color-light); font-size: 0.95rem;">Oral / 第8回医薬品毒性機序研究会 (北海道・ハイブリッド)</span>
           </div>
         </li>
         <li>
@@ -144,19 +144,11 @@ title: ""
   <section class="modern-section">
     <h2 class="section-title"><i class="fas fa-certificate"></i> Key Certifications</h2>
     <div class="modern-card">
-      <dl class="cert-grid">
-        <dt class="cert-grid-title">IT & データサイエンス</dt>
-        <dd class="cert-grid-desc">データベーススペシャリスト試験 合格, 応用情報技術者試験 合格, 統計検定 2級</dd>
-        
-        <dt class="cert-grid-title">語学</dt>
-        <dd class="cert-grid-desc">実用英語技能検定 準1級</dd>
-        
-        <dt class="cert-grid-title">デザイン</dt>
-        <dd class="cert-grid-desc">色彩検定 2級 & UC (Universal Color) 級</dd>
-        
-        <dt class="cert-grid-title">その他</dt>
-        <dd class="cert-grid-desc">剣道 2段</dd>
-      </dl>
+      <ul class="clean-list">
+        <li><i class="fas fa-check-circle"></i> データベーススペシャリスト試験 合格</li>
+        <li><i class="fas fa-check-circle"></i> 応用情報技術者試験 合格</li>
+        <li><i class="fas fa-check-circle"></i> 統計検定 2級</li>
+      </ul>
     </div>
   </section>
 
