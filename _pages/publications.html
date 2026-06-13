@@ -1,38 +1,42 @@
 ---
-layout: archive
-title: "Publications"
+layout: splash
+title: ""
 permalink: /publications/
-author_profile: true
 ---
 
-Under construction.
+<div class="background-blob"></div>
 
-<!-- {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+<div class="modern-content-wrapper" style="margin-top: 4rem;">
 
-{% include base_path %}
+  <section class="modern-section">
+    <h1 class="section-title" style="font-size: 2.2rem; font-weight: 500; margin-bottom: 3rem; border-bottom: 1px solid var(--global-border-color); padding-bottom: 1rem;"><i class="fas fa-book-open"></i> Publications & Conferences</h1>
+    
+    <h2 class="section-title" style="margin-top: 3rem;"><i class="fas fa-file-alt"></i> Journal Articles & Preprints</h2>
+    <div class="modern-card item-card" style="margin-bottom: 3rem;">
+      <div class="item-meta">bioRxiv, 2025</div>
+      <h3 class="item-title" style="font-size: 1.3rem;">Designing Cell–Cell Relation Extraction Models: A Systematic Evaluation of Entity Representation and Pre-training Strategies</h3>
+      <p class="item-authors" style="font-size: 1.05rem;"><strong>Mei Yoshikawa</strong>, Tadahaya Mizuno†, Yohei Ohto, Hiromi Fujimoto, Hiroyuki Kusuhara</p>
+    </div>
 
-# New style rendering if publication categories are defined
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %} -->
+    <h2 class="section-title"><i class="fas fa-users"></i> Conferences & Presentations</h2>
+    <div class="modern-grid">
+      <div class="modern-card item-card">
+        <div class="item-meta">Oral / 医薬品毒性機序研究会 (北海道) / 12/2025</div>
+        <h3 class="item-title">言語モデルを用いた生物医学論文からの細胞間相互作用抽出の検討</h3>
+      </div>
+      <div class="modern-card item-card">
+        <div class="item-meta">Poster / 医療薬科学シンポジウム (京都) / 9/2025</div>
+        <h3 class="item-title">言語AIを用いた細胞-細胞関係性情報構造化の検討</h3>
+      </div>
+      <div class="modern-card item-card">
+        <div class="item-meta">Poster / バイオインフォマティクス学会 (名古屋) / 9/2025</div>
+        <h3 class="item-title">細胞間関係性の俯瞰に向けた言語モデルによる細胞間関係性抽出の検討</h3>
+      </div>
+      <div class="modern-card item-card">
+        <div class="item-meta">Poster / 日本薬学会 (福岡) / 3/2025</div>
+        <h3 class="item-title">細胞間関係性の俯瞰に向けた言語モデルによる免疫細胞関係性抽出の検討</h3>
+      </div>
+    </div>
+  </section>
 
-
-
+</div>

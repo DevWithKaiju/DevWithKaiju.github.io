@@ -73,6 +73,9 @@ html[data-theme="dark"] .masthead {
   padding-top: 0.5rem !important; 
   padding-bottom: 0.5rem !important;
   margin-top: 0 !important;
+  max-width: 850px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 /* Masthead Link Hover */
@@ -207,7 +210,7 @@ html[data-theme="dark"] .hero-social-link {
 .modern-content-wrapper {
   max-width: 850px;
   margin: 0 auto;
-  padding: 0 1rem 4rem 1rem;
+  padding: 0 1rem 8rem 1rem; /* Generous padding before footer */
   position: relative;
 }
 

@@ -17,6 +17,7 @@ title: ""
       <div class="hero-socials">
         <a href="mailto:{{ site.author.email }}" class="hero-social-link"><i class="fas fa-envelope"></i></a>
         <a href="https://github.com/{{ site.author.github }}" class="hero-social-link"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" class="hero-social-link"><i class="fab fa-linkedin-in"></i></a>
       </div>
     </div>
   </div>
@@ -52,32 +53,52 @@ title: ""
 
   <section class="modern-section">
     <h2 class="section-title"><i class="fas fa-book-open"></i> Publications & Preprints</h2>
-    <div class="modern-card item-card">
-      <div class="item-meta">_bioRxiv_, 2025</div>
-      <h3 class="item-title">Designing Cell–Cell Relation Extraction Models: A Systematic Evaluation of Entity Representation and Pre-training Strategies</h3>
-      <p class="item-authors"><strong>Mei Yoshikawa</strong>, Tadahaya Mizuno†, Yohei Ohto, Hiromi Fujimoto, Hiroyuki Kusuhara</p>
+    <div class="modern-card">
+      <ul class="timeline-list">
+        <li>
+          <div class="timeline-date">2025</div>
+          <div class="timeline-content">
+            <strong>Designing Cell–Cell Relation Extraction Models: A Systematic Evaluation of Entity Representation and Pre-training Strategies</strong><br>
+            <span style="color: var(--global-text-color-light); font-size: 0.95rem;"><strong>Mei Yoshikawa</strong>, Tadahaya Mizuno†, Yohei Ohto, Hiromi Fujimoto, Hiroyuki Kusuhara (<em>bioRxiv</em>)</span>
+          </div>
+        </li>
+      </ul>
     </div>
   </section>
 
   <section class="modern-section">
     <h2 class="section-title"><i class="fas fa-users"></i> Conferences</h2>
-    <div class="modern-grid">
-      <div class="modern-card item-card">
-        <div class="item-meta">Poster / 日本薬学会 (福岡) / 3/2025</div>
-        <h3 class="item-title">細胞間関係性の俯瞰に向けた言語モデルによる免疫細胞関係性抽出の検討</h3>
-      </div>
-      <div class="modern-card item-card">
-        <div class="item-meta">Poster / バイオインフォマティクス学会 (名古屋) / 9/2025</div>
-        <h3 class="item-title">細胞間関係性の俯瞰に向けた言語モデルによる細胞間関係性抽出の検討</h3>
-      </div>
-      <div class="modern-card item-card">
-        <div class="item-meta">Poster / 医療薬科学シンポジウム (京都) / 9/2025</div>
-        <h3 class="item-title">言語AIを用いた細胞-細胞関係性情報構造化の検討</h3>
-      </div>
-      <div class="modern-card item-card">
-        <div class="item-meta">Oral / 医薬品毒性機序研究会 (北海道) / 12/2025</div>
-        <h3 class="item-title">言語モデルを用いた生物医学論文からの細胞間相互作用抽出の検討</h3>
-      </div>
+    <div class="modern-card">
+      <ul class="timeline-list">
+        <li>
+          <div class="timeline-date">2025/12</div>
+          <div class="timeline-content">
+            <strong>言語モデルを用いた生物医学論文からの細胞間相互作用抽出の検討</strong><br>
+            <span style="color: var(--global-text-color-light); font-size: 0.95rem;">Oral / 医薬品毒性機序研究会 (北海道)</span>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-date">2025/9</div>
+          <div class="timeline-content">
+            <strong>言語AIを用いた細胞-細胞関係性情報構造化の検討</strong><br>
+            <span style="color: var(--global-text-color-light); font-size: 0.95rem;">Poster / 医療薬科学シンポジウム (京都)</span>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-date">2025/9</div>
+          <div class="timeline-content">
+            <strong>細胞間関係性の俯瞰に向けた言語モデルによる細胞間関係性抽出の検討</strong><br>
+            <span style="color: var(--global-text-color-light); font-size: 0.95rem;">Poster / バイオインフォマティクス学会 (名古屋)</span>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-date">2025/3</div>
+          <div class="timeline-content">
+            <strong>細胞間関係性の俯瞰に向けた言語モデルによる免疫細胞関係性抽出の検討</strong><br>
+            <span style="color: var(--global-text-color-light); font-size: 0.95rem;">Poster / 日本薬学会 (福岡)</span>
+          </div>
+        </li>
+      </ul>
     </div>
   </section>
 
