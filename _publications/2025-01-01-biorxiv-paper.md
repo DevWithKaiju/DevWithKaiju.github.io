@@ -2,7 +2,7 @@
 title: "Defining and Evaluating Cell–Cell Relation Extraction from Biomedical Literature under Realistic Annotation Constraints"
 collection: publications
 permalink: /publication/2025-01-01-biorxiv-paper
-excerpt: "We systematically evaluate language models for cell-cell relation extraction in biomedical text, accelerating data-driven drug discovery."
+excerpt: "Established cell–cell relation extraction as a new biomedical text mining task and developed the first benchmark corpora for its systematic evaluation. Through comprehensive experiments, demonstrated the feasibility of literature-scale extraction of cell–cell relationships and provided a foundation for future studies of intercellular communication using biomedical literature."
 date: 2025-01-01
 venue: "bioRxiv"
 authors: "Mei Yoshikawa, Tadahaya Mizuno†, Yohei Ohto, Hiromi Fujimoto, Hiroyuki Kusuhara"
