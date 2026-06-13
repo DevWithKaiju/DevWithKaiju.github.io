@@ -73,12 +73,11 @@ title: ""
       <ul class="clean-list" style="display: flex; flex-direction: column; gap: 0.8rem;">
         {% for post in site.publications reversed %}
         <li style="align-items: flex-start; gap: 0.5rem; border-bottom: 1px dashed var(--global-border-color); padding-bottom: 0.8rem;">
-          <span style="color: var(--primary-color); font-weight: 500; min-width: 50px;">{{ post.date | date: "%Y" }}</span>
-          <span style="font-size: 0.95rem; line-height: 1.5;">
-            <strong>{{ post.title }}</strong><br>
-            <span style="color: var(--global-text-color-light);">{{ post.citation | strip_html | truncatewords: 20 }}</span>
-          </span>
-        </li>
+        <span style="color: var(--primary-color); font-weight: 500; min-width: 50px;">{{ post.date | date: "%Y" }}</span>
+        <span style="font-size: 0.95rem; line-height: 1.5; color: var(--global-text-color);">
+          {{ post.citation | strip_html }}
+        </span>
+      </li>
         {% endfor %}
       </ul>
       <div style="text-align: right; margin-top: 1rem;">
