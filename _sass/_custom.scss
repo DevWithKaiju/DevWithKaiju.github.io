@@ -210,7 +210,7 @@ html[data-theme="dark"] .hero-social-link {
 .modern-content-wrapper {
   max-width: 850px;
   margin: 0 auto;
-  padding: 0 1rem 8rem 1rem; /* Generous padding before footer */
+  padding: 0 1rem 12rem 1rem; /* Even more generous padding before footer */
   position: relative;
 }
 
@@ -426,5 +426,5 @@ html[data-theme="dark"] .page__inner-wrap {
 
 /* Force huge gap above footer globally */
 .page__footer {
-  margin-top: 8rem !important; 
+  margin-top: 12rem !important; 
 }
