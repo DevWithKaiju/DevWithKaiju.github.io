@@ -1,10 +1,13 @@
 {% include base_path %}
 
-<div class="page__footer-seo" style="margin-bottom: 1.5rem; font-size: 0.95rem;">
-  Associated with <a href="https://www.f.u-tokyo.ac.jp/" target="_blank" rel="noopener noreferrer" style="font-weight: 500;">Graduate School of Pharmaceutical Sciences, The University of Tokyo</a>
-</div>
+<div class="footer-inner">
+  <div class="page__footer-copyright">
+    &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. <br />
+    Site last updated {{ "now" | date: '%Y-%m-%d' }}
+  </div>
 
-<div class="page__footer-copyright">
-  &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. <br />
-  Site last updated {{ "now" | date: '%Y-%m-%d' }}
+  <div class="footer-links">
+    <a href="https://www.f.u-tokyo.ac.jp/" target="_blank" rel="noopener noreferrer">東京大学 薬学部</a>
+    <a href="https://www.f.u-tokyo.ac.jp/~kusu/index.html" target="_blank" rel="noopener noreferrer">分子薬物動態学教室</a>
+  </div>
 </div>

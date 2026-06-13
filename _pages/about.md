@@ -50,38 +50,39 @@ title: ""
   </section>
 
   <section class="modern-section">
-    <h2 class="section-title"><i class="fas fa-laptop-code"></i> Skills & Interests</h2>
+    <h2 class="section-title"><i class="fas fa-laptop-code"></i> Skills</h2>
     <div class="modern-card tags-card">
-      <span class="modern-tag">Biomedical NLP</span> 
-      <span class="modern-tag">Language Models</span> 
-      <span class="modern-tag">Bioinformatics</span>
-      <span class="modern-tag">Drug Discovery</span>
       <span class="modern-tag">Python (データ解析・機械学習・NLP)</span>
       <span class="modern-tag">Web 開発 (研究室ウェブサイト制作)</span>
     </div>
   </section>
 
   <section class="modern-section">
-    <h2 class="section-title"><i class="fas fa-book-open"></i> Recent Publications</h2>
+    <h2 class="section-title"><i class="fas fa-microscope"></i> Interests</h2>
+    <div class="modern-card tags-card">
+      <span class="modern-tag">Biomedical NLP</span> 
+      <span class="modern-tag">Language Models</span> 
+      <span class="modern-tag">Bioinformatics</span>
+      <span class="modern-tag">Drug Discovery</span>
+    </div>
+  </section>
+
+  <section class="modern-section">
+    <h2 class="section-title"><i class="fas fa-book-open"></i> Publications</h2>
     <div class="modern-card">
-      <ul class="timeline-list">
-        {% for post in site.publications reversed limit:3 %}
-        <li style="margin-bottom: 1.5rem;">
-          <div class="timeline-date">{{ post.date | date: "%Y" }}</div>
-          <div class="timeline-content" style="display: flex; gap: 1rem; align-items: flex-start;">
-            {% if post.header.teaser %}
-              <img src="{{ post.header.teaser | prepend: '/images/' | relative_url }}" style="width: 120px; height: 80px; object-fit: cover; border-radius: 6px; border: 1px solid rgba(0,0,0,0.05); flex-shrink: 0;" alt="thumbnail">
-            {% endif %}
-            <div>
-              <strong><a href="{{ post.url | relative_url }}" style="text-decoration: none; color: inherit;">{{ post.title }}</a></strong><br>
-              <span style="color: var(--global-text-color-light); font-size: 0.95rem;">{{ post.citation | strip_html | truncatewords: 15 }} (<em>{{ post.venue }}</em>)</span>
-            </div>
-          </div>
+      <ul class="clean-list" style="display: flex; flex-direction: column; gap: 0.8rem;">
+        {% for post in site.publications reversed %}
+        <li style="align-items: flex-start; gap: 0.5rem; border-bottom: 1px dashed var(--global-border-color); padding-bottom: 0.8rem;">
+          <span style="color: var(--primary-color); font-weight: 500; min-width: 50px;">{{ post.date | date: "%Y" }}</span>
+          <span style="font-size: 0.95rem; line-height: 1.5;">
+            <strong>{{ post.title }}</strong><br>
+            <span style="color: var(--global-text-color-light);">{{ post.citation | strip_html | truncatewords: 20 }}</span>
+          </span>
         </li>
         {% endfor %}
       </ul>
       <div style="text-align: right; margin-top: 1rem;">
-        <a href="{{ '/publications/' | relative_url }}" style="font-size: 0.95rem; font-weight: 500;">View all publications &rarr;</a>
+        <a href="{{ '/publications/' | relative_url }}" style="font-size: 0.95rem; font-weight: 500; color: var(--accent-color); text-decoration: none;"><i class="fas fa-images"></i> ギャラリー表示はこちら &rarr;</a>
       </div>
     </div>
   </section>
@@ -94,28 +95,28 @@ title: ""
           <div class="timeline-date">2025/12</div>
           <div class="timeline-content">
             <strong>言語モデルを用いた生物医学論文からの細胞間相互作用抽出の検討</strong><br>
-            <span style="color: var(--global-text-color-light); font-size: 0.95rem;">Oral (O-3) / 第8回医薬品毒性機序研究会 (北海道大学獣医学研究院)</span>
+            <span style="color: var(--global-text-color-light); font-size: 0.95rem;">Oral / 第8回医薬品毒性機序研究会 (北海道)</span>
           </div>
         </li>
         <li>
           <div class="timeline-date">2025/9</div>
           <div class="timeline-content">
             <strong>言語AIを用いた細胞-細胞関係性情報構造化の検討</strong><br>
-            <span style="color: var(--global-text-color-light); font-size: 0.95rem;">Poster (P-17) / 第19回次世代を担う若手のための医療薬科学シンポジウム (同志社大学)</span>
+            <span style="color: var(--global-text-color-light); font-size: 0.95rem;">Poster / 第19回次世代を担う若手のための医療薬科学シンポジウム (京都)</span>
           </div>
         </li>
         <li>
           <div class="timeline-date">2025/9</div>
           <div class="timeline-content">
             <strong>細胞間関係性の俯瞰に向けた言語モデルによる細胞間関係性抽出の検討</strong><br>
-            <span style="color: var(--global-text-color-light); font-size: 0.95rem;">Poster (PO-044) / 2025年日本バイオインフォマティクス学会年会 (名古屋大学)</span>
+            <span style="color: var(--global-text-color-light); font-size: 0.95rem;">Poster / 2025年日本バイオインフォマティクス学会年会 (名古屋)</span>
           </div>
         </li>
         <li>
           <div class="timeline-date">2025/3</div>
           <div class="timeline-content">
             <strong>細胞間関係性の俯瞰に向けた言語モデルによる免疫細胞関係性抽出の検討</strong><br>
-            <span style="color: var(--global-text-color-light); font-size: 0.95rem;">Poster (29PA-538S) / 日本薬学会第145年会 (マリンメッセ福岡)</span>
+            <span style="color: var(--global-text-color-light); font-size: 0.95rem;">Poster / 日本薬学会第145年会 (福岡)</span>
           </div>
         </li>
       </ul>
@@ -143,11 +144,19 @@ title: ""
   <section class="modern-section">
     <h2 class="section-title"><i class="fas fa-certificate"></i> Key Certifications</h2>
     <div class="modern-card">
-      <ul class="clean-list">
-        <li><i class="fas fa-check-circle"></i> データベーススペシャリスト試験 合格</li>
-        <li><i class="fas fa-check-circle"></i> 応用情報技術者試験 合格</li>
-        <li><i class="fas fa-check-circle"></i> 統計検定 2級</li>
-      </ul>
+      <dl class="cert-grid">
+        <dt class="cert-grid-title">IT & データサイエンス</dt>
+        <dd class="cert-grid-desc">データベーススペシャリスト試験 合格, 応用情報技術者試験 合格, 統計検定 2級</dd>
+        
+        <dt class="cert-grid-title">語学</dt>
+        <dd class="cert-grid-desc">実用英語技能検定 準1級</dd>
+        
+        <dt class="cert-grid-title">デザイン</dt>
+        <dd class="cert-grid-desc">色彩検定 2級 & UC (Universal Color) 級</dd>
+        
+        <dt class="cert-grid-title">その他</dt>
+        <dd class="cert-grid-desc">剣道 2段</dd>
+      </dl>
     </div>
   </section>
 

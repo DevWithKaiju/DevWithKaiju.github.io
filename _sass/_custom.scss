@@ -299,8 +299,9 @@ html[data-theme="dark"] .modern-card {
 }
 
 .modern-tag {
-  background: var(--primary-color-light);
-  color: var(--primary-color-dark);
+  background: rgba(45, 212, 191, 0.1); /* Mint Green sheer */
+  color: #14b8a6; /* Mint Green */
+  border: 1px solid rgba(45, 212, 191, 0.2);
   padding: 0.4rem 1rem;
   border-radius: 30px;
   font-size: 0.9rem;
@@ -310,16 +311,16 @@ html[data-theme="dark"] .modern-card {
 }
 
 .modern-tag:hover {
-  background: var(--primary-color);
+  background: var(--accent-color);
   color: #fff;
 }
 
 html[data-theme="dark"] .modern-tag {
-  background: rgba(201, 182, 228, 0.15);
-  color: #c9b6e4;
+  background: rgba(20, 184, 166, 0.15);
+  color: #2dd4bf;
 }
 html[data-theme="dark"] .modern-tag:hover {
-  background: var(--primary-color);
+  background: var(--accent-color);
   color: #fff;
 }
 
@@ -391,7 +392,43 @@ a {
   color: var(--global-link-color);
 }
 a:hover {
-  color: var(--primary-color-dark);
+  color: var(--accent-color); /* Mint green hover */
+}
+
+/* Cert Grid */
+.cert-grid {
+  display: grid;
+  grid-template-columns: 180px auto;
+  gap: 0.8rem 1rem;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+.cert-grid-title {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-align: right;
+  position: relative;
+}
+.cert-grid-title::after {
+  content: ":";
+  position: absolute;
+  right: -0.5rem;
+  color: var(--global-text-color-light);
+}
+.cert-grid-desc {
+  color: var(--global-text-color);
+}
+@media (max-width: 600px) {
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+  .cert-grid-title {
+    text-align: left;
+  }
+  .cert-grid-title::after {
+    display: none;
+  }
 }
 
 /* =========================================================
@@ -428,16 +465,25 @@ html[data-theme="dark"] .page__inner-wrap {
    Smart & Minimal Footer Styling
    ========================================================= */
 .page__footer {
-  margin-top: 6rem !important; 
+  margin-top: 4rem !important; 
   background: transparent !important;
   border-top: 1px solid var(--global-border-color) !important;
   padding: 1.5rem 1rem !important;
-  text-align: center;
   position: relative;
 }
 
 html[data-theme="dark"] .page__footer {
   border-top: 1px solid rgba(255,255,255,0.05) !important;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 850px;
+  margin: 0 auto;
 }
 
 .page__footer-copyright {
@@ -446,14 +492,23 @@ html[data-theme="dark"] .page__footer {
   color: var(--global-text-color-light) !important;
   font-weight: 300;
   letter-spacing: 0.03em;
+  margin: 0;
 }
 
-.page__footer-copyright a {
-  color: var(--primary-color) !important;
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--global-text-color-light) !important;
   text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
   transition: all 0.2s ease;
 }
 
-.page__footer-copyright a:hover {
-  color: var(--primary-color-dark) !important;
+.footer-links a:hover {
+  color: var(--accent-color) !important;
 }
