@@ -31,7 +31,7 @@ title: ""
       <ul class="timeline-list">
         <li>
           <div class="timeline-date">2025/4-</div>
-          <div class="timeline-content"><strong>東京大学 大学院薬学系研究科 修士課程</strong> <br><span style="font-size: 0.95rem; color: var(--global-text-color-light);">分子薬物動態学教室</span></div>
+          <div class="timeline-content"><strong>東京大学 大学院薬学系研究科 修士課程</strong> <br><span style="color: var(--global-text-color-light);">分子薬物動態学教室</span></div>
         </li>
         <li>
           <div class="timeline-date">2025/3</div>
@@ -74,7 +74,7 @@ title: ""
         {% for post in site.publications reversed %}
         <li style="align-items: flex-start; gap: 0.5rem; border-bottom: 1px dashed var(--global-border-color); padding-bottom: 0.8rem;">
         <span style="color: var(--primary-color); font-weight: 500; min-width: 50px;">{{ post.date | date: "%Y" }}</span>
-        <span style="font-size: 0.95rem; line-height: 1.5; color: var(--global-text-color);">
+        <span style="line-height: 1.5; color: var(--global-text-color);">
           {{ post.citation | strip_html }}
         </span>
       </li>
@@ -94,28 +94,28 @@ title: ""
           <div class="timeline-date">2025/12</div>
           <div class="timeline-content">
             <strong><a href="#" style="text-decoration: none; color: inherit;">言語モデルを用いた生物医学論文からの細胞間相互作用抽出の検討</a></strong><br>
-            <span style="color: var(--global-text-color-light); font-size: 0.95rem;">Oral / 第8回医薬品毒性機序研究会 (北海道・ハイブリッド)</span>
+            <span style="color: var(--global-text-color-light);">Oral / 第8回医薬品毒性機序研究会 (北海道・ハイブリッド)</span>
           </div>
         </li>
         <li>
           <div class="timeline-date">2025/9</div>
           <div class="timeline-content">
             <strong><a href="#" style="text-decoration: none; color: inherit;">言語AIを用いた細胞-細胞関係性情報構造化の検討</a></strong><br>
-            <span style="color: var(--global-text-color-light); font-size: 0.95rem;">Poster / 第19回次世代を担う若手のための医療薬科学シンポジウム (京都)</span>
+            <span style="color: var(--global-text-color-light);">Poster / 第19回次世代を担う若手のための医療薬科学シンポジウム (京都)</span>
           </div>
         </li>
         <li>
           <div class="timeline-date">2025/9</div>
           <div class="timeline-content">
             <strong><a href="#" style="text-decoration: none; color: inherit;">細胞間関係性の俯瞰に向けた言語モデルによる細胞間関係性抽出の検討</a></strong><br>
-            <span style="color: var(--global-text-color-light); font-size: 0.95rem;">Poster / 2025年日本バイオインフォマティクス学会年会 (名古屋)</span>
+            <span style="color: var(--global-text-color-light);">Poster / 2025年日本バイオインフォマティクス学会年会 (名古屋)</span>
           </div>
         </li>
         <li>
           <div class="timeline-date">2025/3</div>
           <div class="timeline-content">
             <strong><a href="#" style="text-decoration: none; color: inherit;">細胞間関係性の俯瞰に向けた言語モデルによる免疫細胞関係性抽出の検討</a></strong><br>
-            <span style="color: var(--global-text-color-light); font-size: 0.95rem;">Poster / 日本薬学会第145年会 (福岡)</span>
+            <span style="color: var(--global-text-color-light);">Poster / 日本薬学会第145年会 (福岡)</span>
           </div>
         </li>
       </ul>

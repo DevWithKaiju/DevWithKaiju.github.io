@@ -243,6 +243,13 @@ html[data-theme="dark"] .hero-social-link {
   font-weight: 400;
 }
 
+.sec.timeline-content {
+  color: var(--global-text-color);
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
 /* Modern Cards */
 .modern-card {
   background: var(--global-bg-color);
@@ -413,7 +420,7 @@ a:hover {
   margin: 0;
   padding: 0;
   align-items: baseline; /* Fixed alignment */
-  font-size: 1.05rem; /* Larger font */
+  font-size: 1rem;
 }
 .cert-grid-title {
   font-weight: 500;
@@ -585,7 +592,7 @@ html[data-theme="dark"] .page__footer {
 }
 
 .author__bio {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--global-text-color);
   margin-bottom: 1.5rem;
   line-height: 1.5;
@@ -604,7 +611,7 @@ html[data-theme="dark"] .page__footer {
 .author__urls a {
   display: block;
   color: var(--global-text-color) !important;
-  font-size: 0.95rem;
+  font-size: 1rem;
   padding: 0.6rem 1rem;
   border-radius: 12px;
   background: rgba(179, 156, 208, 0.08); /* Faint purple */

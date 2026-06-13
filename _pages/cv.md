@@ -14,7 +14,7 @@ classes: custom-cv-page wide
     <ul class="timeline-list">
       <li>
         <div class="timeline-date">2025/4-</div>
-        <div class="timeline-content"><strong>東京大学 大学院薬学系研究科 修士課程</strong> <br><span style="font-size: 0.95rem; color: var(--global-text-color-light);">分子薬物動態学教室</span></div>
+        <div class="timeline-content"><strong>東京大学 大学院薬学系研究科 修士課程</strong> <br><span style="color: var(--global-text-color-light);">分子薬物動態学教室</span></div>
       </li>
       <li>
         <div class="timeline-date">2025/3</div>
@@ -66,7 +66,7 @@ classes: custom-cv-page wide
       {% for post in site.publications reversed %}
       <li style="align-items: flex-start; gap: 0.5rem; border-bottom: 1px dashed var(--global-border-color); padding-bottom: 0.8rem;">
         <span style="color: var(--primary-color); font-weight: 500; min-width: 50px;">{{ post.date | date: "%Y" }}</span>
-        <span style="font-size: 0.95rem; line-height: 1.5; color: var(--global-text-color);">
+        <span style="line-height: 1.5; color: var(--global-text-color);">
           {{ post.citation | strip_html }}
         </span>
       </li>
