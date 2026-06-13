@@ -4,15 +4,20 @@ permalink: /
 title: ""
 ---
 
+<div class="background-blob"></div>
+
 <div class="hero-container">
-  <div class="hero-profile">
-    <img src="{{ site.author.avatar | prepend: '/images/' | relative_url }}" alt="Mei Yoshikawa" class="hero-avatar">
-    <h1 class="hero-name">吉川 芽生 <span class="hero-name-en">/ Mei Yoshikawa</span></h1>
-    <p class="hero-bio">Master's student at the Graduate School of Pharmaceutical Sciences, University of Tokyo. Exploring the intersection of pharmaceutical sciences, NLP, and Language Models to accelerate data-driven drug discovery.</p>
-    
-    <div class="hero-socials">
-      <a href="mailto:{{ site.author.email }}" class="hero-social-link"><i class="fas fa-envelope"></i></a>
-      <a href="https://github.com/{{ site.author.github }}" class="hero-social-link"><i class="fab fa-github"></i></a>
+  <div class="hero-content">
+    <div class="hero-image">
+      <img src="{{ site.author.avatar | prepend: '/images/' | relative_url }}" alt="Mei Yoshikawa" class="hero-avatar">
+    </div>
+    <div class="hero-text">
+      <h1 class="hero-name">吉川 芽生 <span class="hero-name-en">/ Mei Yoshikawa</span></h1>
+      <p class="hero-bio">Master's student at the Graduate School of Pharmaceutical Sciences, University of Tokyo. Exploring the intersection of pharmaceutical sciences, NLP, and Language Models to accelerate data-driven drug discovery.</p>
+      <div class="hero-socials">
+        <a href="mailto:{{ site.author.email }}" class="hero-social-link"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/{{ site.author.github }}" class="hero-social-link"><i class="fab fa-github"></i></a>
+      </div>
     </div>
   </div>
 </div>

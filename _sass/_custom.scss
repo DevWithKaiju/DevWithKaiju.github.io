@@ -22,6 +22,7 @@ html[data-theme="dark"] {
 }
 
 body {
+  font-family: 'Inter', 'Noto Sans JP', sans-serif;
   overflow-x: hidden;
   color: var(--global-text-color);
 }
@@ -38,51 +39,83 @@ body {
   position: relative !important; /* Overrides any sticky behavior */
 }
 
-/* Hero Section - Simplified and Quiet */
+/* Background Blob for Premium Feel */
+.background-blob {
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, var(--primary-color-light) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(60px);
+  z-index: -1;
+  opacity: 0.8;
+}
+
+html[data-theme="dark"] .background-blob {
+  opacity: 0.3;
+}
+
+/* Hero Section - Two Column Modern Layout */
 .hero-container {
-  background: transparent;
+  padding: 4rem 1rem;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
   text-align: center;
-  padding: 4rem 2rem 2rem 2rem;
-  margin-top: 0;
-  margin-bottom: 3rem;
-  color: var(--global-text-color);
-  width: auto;
-  position: static;
-  left: auto;
-  right: auto;
-  margin-left: 0;
-  margin-right: 0;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .hero-content {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    gap: 4rem;
+  }
 }
 
 .hero-avatar {
-  width: 130px;
-  height: 130px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
-  border: 1px solid var(--global-border-color);
-  box-shadow: 0 4px 15px rgba(137, 114, 158, 0.1); /* Very soft wisteria shadow */
-  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 40px -10px rgba(137, 114, 158, 0.4);
+  margin-bottom: 0;
+  border: none;
+}
+
+.hero-text {
+  flex: 1;
 }
 
 .hero-name {
-  font-size: 2.2rem;
+  font-family: 'Inter', 'Noto Sans JP', sans-serif;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
   color: var(--global-text-color) !important;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 .hero-name-en {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1.4rem;
   color: var(--global-text-color-light);
 }
 
 .hero-bio {
-  max-width: 600px;
-  margin: 0 auto 1.5rem auto;
-  font-size: 1.05rem;
-  line-height: 1.7;
+  font-size: 1.1rem;
+  line-height: 1.8;
   color: var(--global-text-color);
+  margin-bottom: 1.5rem;
 }
 
 .hero-socials {
@@ -91,19 +124,26 @@ body {
   justify-content: center;
 }
 
+@media (min-width: 768px) {
+  .hero-socials {
+    justify-content: flex-start;
+  }
+}
+
 .hero-social-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   background: var(--global-bg-color);
   color: var(--primary-color) !important;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   transition: all 0.2s ease;
   text-decoration: none;
   border: 1px solid var(--global-border-color);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.02);
 }
 
 .hero-social-link:hover {
@@ -121,44 +161,50 @@ html[data-theme="dark"] .hero-social-link {
   max-width: 850px;
   margin: 0 auto;
   padding: 0 1rem 4rem 1rem;
+  position: relative;
 }
 
 .section-title {
-  font-size: 1.6rem;
+  font-family: 'Inter', 'Noto Sans JP', sans-serif;
+  font-size: 1.8rem;
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   color: var(--global-text-color) !important;
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--global-border-color);
+  padding-bottom: 0;
+  border-bottom: none; /* Removed underline for cleaner look */
 }
 
 .section-title i {
   color: var(--primary-color);
-  font-size: 1.4rem;
+  font-size: 1.6rem;
+  opacity: 0.8;
 }
 
-/* Modern Cards */
+/* Modern Cards - Diffuse Shadows & Borderless */
 .modern-card {
   background: var(--global-bg-color);
-  border-radius: 12px;
-  padding: 1.8rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.02);
-  border: 1px solid var(--global-border-color);
+  border-radius: 20px; /* More rounded */
+  padding: 2.2rem; /* More breathing room */
+  box-shadow: 0 10px 40px -10px rgba(0,0,0,0.06); /* Luxurious diffuse shadow */
+  border: none; /* Borderless */
+  position: relative;
+  z-index: 1;
 }
 
 html[data-theme="dark"] .modern-card {
   background: rgba(255,255,255,0.02);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 40px -10px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.05); /* Very subtle border for dark mode depth */
 }
 
 /* Grid Layout for Conferences */
 .modern-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+  gap: 2rem; /* Wider gap */
 }
 
 /* Item Cards */
@@ -172,48 +218,47 @@ html[data-theme="dark"] .modern-card {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--primary-color);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
   font-weight: 600;
 }
 
 .item-title {
-  font-size: 1.15rem;
+  font-family: 'Inter', 'Noto Sans JP', sans-serif;
+  font-size: 1.25rem;
   margin-top: 0;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
   line-height: 1.5;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--global-text-color);
 }
 
 .item-authors {
-  font-size: 0.95rem;
+  font-size: 1rem;
   margin: 0;
-  color: var(--global-text-color);
-  line-height: 1.5;
+  color: var(--global-text-color-light);
+  line-height: 1.6;
 }
 
 /* Tags / Pills */
 .tags-card {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.8rem;
+  gap: 1rem;
 }
 
 .modern-tag {
   background: var(--primary-color-light);
   color: var(--primary-color-dark);
-  padding: 0.4rem 1rem;
+  padding: 0.5rem 1.2rem;
   border-radius: 30px;
   font-size: 0.95rem;
   font-weight: 600;
   display: inline-block;
-  border: 1px solid rgba(137, 114, 158, 0.1);
 }
 
 html[data-theme="dark"] .modern-tag {
-  background: var(--primary-color-light);
-  color: var(--primary-color-dark);
-  border-color: rgba(167, 148, 185, 0.2);
+  background: rgba(167, 148, 185, 0.15);
+  color: #c4b5fd;
 }
 
 /* Timeline/List */
@@ -225,9 +270,9 @@ html[data-theme="dark"] .modern-tag {
 
 .timeline-list li {
   display: flex;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
   align-items: baseline;
-  padding-bottom: 1.2rem;
+  padding-bottom: 1.5rem;
   border-bottom: 1px dashed var(--global-border-color);
 }
 
@@ -240,14 +285,16 @@ html[data-theme="dark"] .modern-tag {
 .timeline-date {
   font-weight: 700;
   color: var(--primary-color);
-  min-width: 80px;
+  min-width: 90px;
   margin-right: 1.5rem;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
+  font-family: 'Inter', sans-serif;
 }
 
 .timeline-content {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   color: var(--global-text-color);
+  line-height: 1.6;
 }
 
 .clean-list {
@@ -257,17 +304,17 @@ html[data-theme="dark"] .modern-tag {
 }
 
 .clean-list li {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   display: flex;
   align-items: center;
-  gap: 0.8rem;
-  font-size: 1.05rem;
+  gap: 1rem;
+  font-size: 1.1rem;
   color: var(--global-text-color);
 }
 
 .clean-list li i {
   color: var(--primary-color);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .clean-list li:last-child {
