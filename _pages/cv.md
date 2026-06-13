@@ -3,14 +3,12 @@ layout: single
 title: "履歴書 (Curriculum Vitae)"
 permalink: /cv/
 author_profile: true
-classes: custom-cv-page
+classes: custom-cv-page wide
 ---
 
 <div class="background-blob"></div>
 
 <section class="modern-section" style="margin-top: 2rem;">
-  <h1 class="section-title" style="font-size: 2.2rem; font-weight: 500; margin-bottom: 3rem; border-bottom: 1px dashed var(--global-border-color); padding-bottom: 1rem;"><i class="fas fa-user-circle"></i> Curriculum Vitae</h1>
-  
   <h2 class="section-title"><i class="fas fa-graduation-cap"></i> 学歴 (Education)</h2>
   <div class="modern-card">
     <ul class="timeline-list">

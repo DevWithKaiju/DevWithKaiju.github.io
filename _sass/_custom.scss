@@ -73,17 +73,26 @@ html[data-theme="dark"] .masthead {
   padding-top: 0.5rem !important; 
   padding-bottom: 0.5rem !important;
   margin-top: 0 !important;
-  max-width: 850px !important;
+  max-width: 980px !important; /* Widened to fit all links */
   margin-left: auto !important;
   margin-right: auto !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
 }
 
-/* Masthead Link Hover */
+/* Masthead Link & Title Adjustments */
+.site-title {
+  font-size: 1.1rem !important;
+  font-family: 'Outfit', 'Noto Sans JP', sans-serif !important;
+}
+
 .masthead__menu-item a {
   font-weight: 400 !important; /* Thinner menu links */
+  font-size: 0.95rem !important;
+  padding-right: 1rem !important;
 }
 .masthead__menu-item a:hover {
-  color: var(--primary-color) !important;
+  color: var(--accent-color) !important;
 }
 
 /* Background Blob for Premium Feel */
@@ -398,7 +407,7 @@ a:hover {
 /* Cert Grid */
 .cert-grid {
   display: grid;
-  grid-template-columns: 220px auto;
+  grid-template-columns: 180px auto;
   gap: 0.8rem 1rem;
   font-weight: 300;
   margin: 0;
@@ -429,9 +438,6 @@ a:hover {
   box-shadow: none !important;
   padding: 0 !important;
   margin-top: 0 !important;
-}
-.custom-cv-page .page__title {
-  display: none !important;
 }
 
 /* =========================================================
