@@ -424,7 +424,35 @@ html[data-theme="dark"] .page__inner-wrap {
   padding-bottom: 1rem !important;
 }
 
-/* Force huge gap above footer globally */
+/* =========================================================
+   Modern Footer Styling
+   ========================================================= */
 .page__footer {
   margin-top: 12rem !important; 
+  background: var(--primary-color-light) !important;
+  border-radius: 40px 40px 0 0 !important;
+  padding: 3rem 2rem 2rem 2rem !important;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 -10px 40px rgba(0,0,0,0.02);
+}
+
+html[data-theme="dark"] .page__footer {
+  background: rgba(255,255,255,0.03) !important;
+  box-shadow: 0 -10px 40px rgba(0,0,0,0.2);
+}
+
+.page__footer-copyright {
+  font-family: 'Outfit', 'Noto Sans JP', sans-serif !important;
+  font-size: 0.95rem;
+  color: var(--global-text-color-light) !important;
+}
+
+.page__footer-copyright a {
+  color: var(--primary-color) !important;
+  text-decoration: none;
+}
+
+.page__footer-copyright a:hover {
+  text-decoration: underline;
 }
