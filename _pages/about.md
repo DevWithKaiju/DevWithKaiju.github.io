@@ -52,10 +52,8 @@ title: ""
   <section class="modern-section">
     <h2 class="section-title"><i class="fas fa-laptop-code"></i> Skills</h2>
     <div class="modern-card tags-card">
-      <span class="modern-tag">Python</span>
-      <span class="modern-tag">(データ解析・機械学習・NLP)</span>
-      <a href="https://www.mizuno-group.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;"><span class="modern-tag">Web 開発</span></a>
-      <a href="https://www.mizuno-group.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;"><span class="modern-tag">(研究室ウェブサイト制作)</span></a>
+      <span class="modern-tag"><span style="display: inline-block;">Python</span> <span style="display: inline-block;">(データ解析・機械学習・NLP)</span></span>
+      <a href="https://www.mizuno-group.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;"><span class="modern-tag"><span style="display: inline-block;">Web 開発</span> <span style="display: inline-block;">(研究室ウェブサイト制作)</span></span></a>
     </div>
   </section>
 
