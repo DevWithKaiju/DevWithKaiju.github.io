@@ -74,8 +74,10 @@ header:
 ```html
       <li>
         <div class="timeline-date">YYYY/MM</div>
-        <div class="timeline-content">活動の内容や受賞名を入力<br>
-        <span style="color: var(--global-text-color-light);">必要であればここに補足（主催者など）</span></div>
+        <div class="timeline-content">
+          <strong>ここに活動の内容や受賞名を入力</strong><br>
+          <span style="color: var(--global-text-color-light);">必要であればここに補足（主催者など）</span>
+        </div>
       </li>
 ```
 
