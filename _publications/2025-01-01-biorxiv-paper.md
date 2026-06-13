@@ -9,7 +9,7 @@ authors: "Mei Yoshikawa, Tadahaya Mizuno†, Yohei Ohto, Hiromi Fujimoto, Hiroyu
 paperurl: "https://doi.org/10.64898/2025.12.01.691726"
 citation: "Defining and Evaluating Cell–Cell Relation Extraction from Biomedical Literature under Realistic Annotation Constraints. Mei Yoshikawa, Tadahaya Mizuno†, Yohei Ohto, Hiromi Fujimoto, Hiroyuki Kusuhara. <i>bioRxiv</i>."
 header:
-  teaser: "dummy_publication_thumbnail.png"
+  teaser: "F1.medium.gif"
 ---
 
 A systematic evaluation of Entity Representation and Pre-training Strategies for Cell-Cell Relation Extraction. 
