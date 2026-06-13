@@ -115,7 +115,7 @@ html[data-theme="dark"] .background-blob {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem; /* Reduced gap */
   text-align: center;
   max-width: 850px;
   margin: 0 auto;
@@ -234,15 +234,15 @@ html[data-theme="dark"] .hero-social-link {
   font-weight: 400;
 }
 
-/* Modern Cards - Diffuse Shadows & Borderless */
+/* Modern Cards */
 .modern-card {
   background: var(--global-bg-color);
-  border-radius: 18px; 
-  padding: 2rem; 
-  box-shadow: 0 8px 30px -5px rgba(0,0,0,0.05); 
-  border: none; 
-  position: relative;
-  z-index: 1;
+  border-radius: 12px;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px -2px rgba(0,0,0,0.03); /* Softer shadow */
+  border: 1px solid rgba(0,0,0,0.03); /* Thinner border */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 html[data-theme="dark"] .modern-card {
