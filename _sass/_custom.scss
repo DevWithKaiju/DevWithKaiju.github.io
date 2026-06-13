@@ -73,7 +73,7 @@ html[data-theme="dark"] .masthead {
   padding-top: 0.5rem !important; 
   padding-bottom: 0.5rem !important;
   margin-top: 0 !important;
-  max-width: 750px !important;
+  max-width: 850px !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
@@ -117,7 +117,7 @@ html[data-theme="dark"] .background-blob {
   align-items: center;
   gap: 2rem;
   text-align: center;
-  max-width: 750px;
+  max-width: 850px;
   margin: 0 auto;
 }
 
@@ -208,7 +208,7 @@ html[data-theme="dark"] .hero-social-link {
 
 /* Modern Content Wrapper */
 .modern-content-wrapper {
-  max-width: 750px;
+  max-width: 850px;
   margin: 0 auto;
   padding: 0 1rem 12rem 1rem; /* Even more generous padding before footer */
   position: relative;
@@ -403,7 +403,7 @@ a:hover {
   padding: 3rem !important; 
   box-shadow: 0 8px 30px -5px rgba(0,0,0,0.05) !important; 
   border: none !important;
-  max-width: 750px !important;
+  max-width: 850px !important;
   margin: 0 auto !important;
   margin-top: 2rem !important;
 }
@@ -431,7 +431,7 @@ html[data-theme="dark"] .page__inner-wrap {
   margin-top: 10rem !important; 
   background: transparent !important;
   border-top: 1px solid var(--global-border-color) !important;
-  padding: 3rem 1rem !important;
+  padding: 1.5rem 1rem !important;
   text-align: center;
   position: relative;
 }
