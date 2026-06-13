@@ -43,19 +43,24 @@ classes: custom-cv-page wide
 <section class="modern-section">
   <h2 class="section-title"><i class="fas fa-certificate"></i> 資格 (Certifications)</h2>
   <div class="modern-card">
-    <dl class="cert-grid">
-      <dt class="cert-grid-title">IT & データサイエンス</dt>
-      <dd class="cert-grid-desc">データベーススペシャリスト試験 合格, 応用情報技術者試験 合格, 統計検定 2級</dd>
-      
-      <dt class="cert-grid-title">語学</dt>
-      <dd class="cert-grid-desc">実用英語技能検定 準1級</dd>
-      
-      <dt class="cert-grid-title">デザイン</dt>
-      <dd class="cert-grid-desc">色彩検定 2級 & UC (Universal Color) 級</dd>
-      
-      <dt class="cert-grid-title">その他</dt>
-      <dd class="cert-grid-desc">剣道 2段</dd>
-    </dl>
+    <ul class="timeline-list">
+      <li>
+        <div class="timeline-date">IT & データサイエンス</div>
+        <div class="timeline-content">データベーススペシャリスト試験 合格, 応用情報技術者試験 合格, 統計検定 2級</div>
+      </li>
+      <li>
+        <div class="timeline-date">語学</div>
+        <div class="timeline-content">実用英語技能検定 準1級</div>
+      </li>
+      <li>
+        <div class="timeline-date">デザイン</div>
+        <div class="timeline-content">色彩検定 2級 & UC (Universal Color) 級</div>
+      </li>
+      <li>
+        <div class="timeline-date">その他</div>
+        <div class="timeline-content">剣道 2段</div>
+      </li>
+    </ul>
   </div>
 </section>
 
