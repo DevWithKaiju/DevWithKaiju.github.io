@@ -33,15 +33,20 @@ html[data-theme="dark"] {
   color: #ffffff;
 }
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 body {
   font-family: 'Outfit', 'Noto Sans JP', sans-serif;
   font-size: 0.95rem; /* Slightly smaller for a more refined look */
   font-weight: 300; /* Lighter weight */
-  overflow-x: hidden;
   color: var(--global-text-color);
   line-height: 1.6;
   margin: 0 !important;
   padding: 0 !important;
+  position: relative;
 }
 
 /* Override default Splash Layout padding */
@@ -385,6 +390,19 @@ html[data-theme="dark"] .modern-tag:hover {
   font-weight: 300;
 }
 
+@media (max-width: 600px) {
+  .timeline-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .timeline-date, .certifications-list .timeline-date {
+    flex: auto;
+    min-width: auto;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+
 .clean-list {
   list-style: none;
   padding: 0;
@@ -584,11 +602,12 @@ html[data-theme="dark"] .page__footer {
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  border: 4px solid var(--accent-color);
+  border: none;
   padding: 4px;
   background: white;
   margin: 0 auto 1rem;
-  box-shadow: 0 4px 15px rgba(45, 212, 191, 0.2);
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.25), 
+              0 8px 25px rgba(45, 212, 191, 0.2);
 }
 
 .author__name {
