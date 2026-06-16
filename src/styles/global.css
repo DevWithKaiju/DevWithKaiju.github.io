@@ -543,7 +543,7 @@ a:hover {
 }
 
 .gallery-link {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
   color: var(--accent-color);
   text-decoration: none;
