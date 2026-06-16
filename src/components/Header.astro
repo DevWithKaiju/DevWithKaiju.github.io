@@ -11,13 +11,16 @@ const currentPath = Astro.url.pathname;
       <i class="fas fa-bars"></i>
     </button>
     <ul class="masthead__nav" id="nav-menu">
-      {navigation.map((link) => (
-        <li>
-          <a href={link.url} class={currentPath === link.url ? 'is-active' : ''}>
-            {link.title}
-          </a>
-        </li>
-      ))}
+      {navigation.map((link) => {
+        const isActive = currentPath.replace(/\/$/, '') === link.url.replace(/\/$/, '') || (currentPath === '/' && link.url === '/');
+        return (
+          <li>
+            <a href={link.url} class={isActive ? 'is-active' : ''} style={isActive ? 'color: var(--primary-color); font-weight: 500;' : ''}>
+              {link.title}
+            </a>
+          </li>
+        );
+      })}
       <li>
         <button class="theme-toggle-btn" id="theme-toggle" aria-label="テーマ切り替え">
           <i id="theme-icon" class="fa-solid fa-sun"></i>

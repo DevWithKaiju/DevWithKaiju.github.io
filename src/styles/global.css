@@ -334,7 +334,6 @@ html[data-theme="dark"] .hero-social-link {
   color: var(--primary-color);
   font-size: 1.4rem;
   opacity: 0.9;
-  font-weight: 400;
 }
 
 /* =============================================
@@ -812,15 +811,17 @@ html[data-theme="dark"] .author__avatar img {
 }
 
 .author__urls a {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
   color: var(--global-text-color);
   font-size: 0.9rem;
-  padding: 0.5rem 0.8rem;
+  padding: 0.5rem 1rem;
   border-radius: 12px;
   background: rgba(179, 156, 208, 0.08);
   text-decoration: none;
   transition: all 0.3s ease;
-  text-align: left;
 }
 
 .author__urls a:hover {
@@ -834,7 +835,7 @@ html[data-theme="dark"] .author__avatar img {
   color: var(--accent-color);
   width: 20px;
   text-align: center;
-  margin-right: 0.5rem;
+  margin-right: 0;
   transition: all 0.3s ease;
 }
 
@@ -958,6 +959,38 @@ h1, h2, h3, h4, h5, h6 {
 
 .page__content p {
   margin-bottom: 1rem;
+}
+
+.page__content ul,
+.page__content ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.page__content li {
+  margin-bottom: 0.5rem;
+}
+
+.page__content blockquote {
+  margin: 1.5rem 0;
+  padding: 0.5rem 1rem;
+  border-left: 4px solid var(--primary-color);
+  background: rgba(179, 156, 208, 0.05);
+  color: var(--global-text-color-light);
+  font-style: italic;
+}
+
+html[data-theme="dark"] .page__content blockquote {
+  background: rgba(255,255,255,0.02);
+}
+
+.page__content strong {
+  font-weight: 500;
+  color: var(--primary-color-dark);
+}
+
+html[data-theme="dark"] .page__content strong {
+  color: var(--primary-color-dark);
 }
 
 .page__content pre {
