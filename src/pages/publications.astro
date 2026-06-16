@@ -1,0 +1,43 @@
+---
+import SplashLayout from '../layouts/SplashLayout.astro';
+import { getCollection } from 'astro:content';
+
+const publications = (await getCollection('publications')).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
+---
+
+<SplashLayout title="Publications">
+  <div class="background-blob"></div>
+
+  <div class="modern-content-wrapper" style="margin-top: 4rem;">
+    <section class="modern-section">
+      <h1 class="pub-header"><i class="fas fa-book-open"></i> Publications</h1>
+
+      <div class="modern-grid">
+        {publications.map((pub) => (
+          <div class="modern-card item-card pub-grid-card">
+            {pub.data.header?.teaser && (
+              <div class="pub-thumbnail-container">
+                <img src={`/images/${pub.data.header.teaser}`} alt="thumbnail" class="pub-thumbnail-img" />
+              </div>
+            )}
+            <div class="item-meta">{pub.data.venue}, {pub.data.date.getFullYear()}</div>
+            <h3 class="pub-title-grid">{pub.data.title}</h3>
+            {pub.data.authors ? (
+              <p class="pub-authors-grid">{pub.data.authors}</p>
+            ) : pub.data.citation ? (
+              <p class="pub-authors-grid">{pub.data.citation}</p>
+            ) : null}
+            {pub.data.excerpt && <p class="pub-excerpt-grid">{pub.data.excerpt}</p>}
+            {pub.data.paperurl && (
+              <a href={pub.data.paperurl} target="_blank" rel="noopener noreferrer" class="pub-paper-link">
+                <i class="fas fa-external-link-alt"></i> Paper Link
+              </a>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
+  </div>
+</SplashLayout>

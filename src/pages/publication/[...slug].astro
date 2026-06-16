@@ -1,0 +1,54 @@
+---
+import SingleLayout from '../../layouts/SingleLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const publications = await getCollection('publications');
+  return publications.map((pub) => ({
+    params: { slug: pub.id.replace(/\.md$/, '') },
+    props: { pub },
+  }));
+}
+
+const { pub } = Astro.props;
+const { Content } = await render(pub);
+---
+
+<SingleLayout title={pub.data.title} showTitle={false}>
+  <header>
+    <h1 class="page__title">{pub.data.title}</h1>
+    <div class="text-primary" style="margin-top: 0.5rem; margin-bottom: 1rem;">
+      {pub.data.date.getFullYear()} | <em>{pub.data.venue}</em>
+    </div>
+  </header>
+
+  <section class="page__content">
+    <Content />
+
+    <div class="pub-authors-card">
+      {pub.data.authors && (
+        <div style="margin-bottom: 0.5rem;">
+          <strong>Authors:</strong> <span class="text-light">{pub.data.authors}</span>
+        </div>
+      )}
+
+      <div class="modern-btn-wrapper">
+        {pub.data.paperurl && (
+          <a href={pub.data.paperurl} target="_blank" rel="noopener noreferrer" class="modern-btn modern-btn-primary">
+            <i class="fas fa-external-link-alt"></i> Paper Link
+          </a>
+        )}
+        {pub.data.slidesurl && (
+          <a href={pub.data.slidesurl} target="_blank" rel="noopener noreferrer" class="modern-btn modern-btn-accent">
+            <i class="fas fa-file-powerpoint"></i> Slides
+          </a>
+        )}
+        {pub.data.bibtexurl && (
+          <a href={pub.data.bibtexurl} target="_blank" rel="noopener noreferrer" class="modern-btn modern-btn-outline">
+            <i class="fas fa-quote-right"></i> BibTeX
+          </a>
+        )}
+      </div>
+    </div>
+  </section>
+</SingleLayout>

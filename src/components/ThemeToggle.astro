@@ -1,0 +1,44 @@
+---
+// ThemeToggle — script-only component for dark mode
+---
+
+<script>
+  function initTheme() {
+    const toggle = document.getElementById('theme-toggle');
+    const icon = document.getElementById('theme-icon');
+
+    // Determine initial theme
+    const stored = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const theme = stored || (prefersDark ? 'dark' : 'light');
+
+    applyTheme(theme);
+
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        applyTheme(next);
+        localStorage.setItem('theme', next);
+      });
+    }
+  }
+
+  function applyTheme(theme: string) {
+    const icon = document.getElementById('theme-icon');
+    if (theme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      if (icon) {
+        icon.className = 'fa-solid fa-moon';
+      }
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+      if (icon) {
+        icon.className = 'fa-solid fa-sun';
+      }
+    }
+  }
+
+  // Run on initial load and on each Astro page navigation
+  document.addEventListener('astro:page-load', initTheme);
+</script>

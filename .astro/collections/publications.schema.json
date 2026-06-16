@@ -1,0 +1,77 @@
+{
+  "$ref": "#/definitions/publications",
+  "definitions": {
+    "publications": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "date": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "integer",
+              "format": "unix-time"
+            }
+          ]
+        },
+        "venue": {
+          "type": "string"
+        },
+        "authors": {
+          "type": "string"
+        },
+        "paperurl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "slidesurl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "bibtexurl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "citation": {
+          "type": "string"
+        },
+        "excerpt": {
+          "type": "string"
+        },
+        "permalink": {
+          "type": "string"
+        },
+        "collection": {
+          "type": "string"
+        },
+        "header": {
+          "type": "object",
+          "properties": {
+            "teaser": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "date"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

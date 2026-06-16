@@ -1,0 +1,14 @@
+---
+import SingleLayout from '../layouts/SingleLayout.astro';
+---
+
+<SingleLayout title="404 - Not Found" showTitle={false}>
+  <div class="placeholder-page">
+    <i class="fas fa-ghost"></i>
+    <h2>Oops! Page Not Found</h2>
+    <p>お探しのページは削除されたか、移動したようです🐾<br />左のメニューからトップページにお戻りください！</p>
+    <a href="/" class="gallery-link" style="margin-top: 1.5rem; display: inline-block;">
+      <i class="fas fa-home"></i> トップページへ戻る &rarr;
+    </a>
+  </div>
+</SingleLayout>

@@ -1,0 +1,41 @@
+---
+import { siteConfig, navigation } from '../config';
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="masthead">
+  <div class="masthead__inner-wrap">
+    <a class="site-title" href="/">{siteConfig.title}</a>
+    <button class="masthead__hamburger" id="nav-toggle" aria-label="メニューを開く">
+      <i class="fas fa-bars"></i>
+    </button>
+    <ul class="masthead__nav" id="nav-menu">
+      {navigation.map((link) => (
+        <li>
+          <a href={link.url} class={currentPath === link.url ? 'is-active' : ''}>
+            {link.title}
+          </a>
+        </li>
+      ))}
+      <li>
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="テーマ切り替え">
+          <i id="theme-icon" class="fa-solid fa-sun"></i>
+        </button>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<script>
+  // Mobile hamburger toggle
+  document.addEventListener('astro:page-load', () => {
+    const toggle = document.getElementById('nav-toggle');
+    const menu = document.getElementById('nav-menu');
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        menu.classList.toggle('is-open');
+      });
+    }
+  });
+</script>

@@ -1,0 +1,32 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import AuthorProfile from '../components/AuthorProfile.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  showTitle?: boolean;
+}
+
+const { title, description, showTitle = true } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="single-layout">
+    <aside class="single-layout__sidebar">
+      <AuthorProfile />
+    </aside>
+    <div class="single-layout__content">
+      <div class="page__inner-wrap">
+        {showTitle && title && (
+          <header>
+            <h1 class="page__title">{title}</h1>
+          </header>
+        )}
+        <section class="page__content">
+          <slot />
+        </section>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

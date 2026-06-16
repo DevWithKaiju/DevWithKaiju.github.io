@@ -1,0 +1,32 @@
+---
+import SingleLayout from '../../layouts/SingleLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map((post) => ({
+    params: { slug: post.id.replace(/\.md$/, '') },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<SingleLayout title={post.data.title}>
+  <div class="page__content">
+    <p class="text-light" style="margin-bottom: 1.5rem;">
+      <i class="fa fa-fw fa-calendar" aria-hidden="true"></i>
+      {post.data.date.toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' })}
+    </p>
+    {post.data.tags && post.data.tags.length > 0 && (
+      <div style="margin-bottom: 1.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        {post.data.tags.map((tag) => (
+          <span class="modern-tag" style="font-size: 0.8rem; padding: 0.2rem 0.7rem;">{tag}</span>
+        ))}
+      </div>
+    )}
+    <Content />
+  </div>
+</SingleLayout>

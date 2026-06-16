@@ -1,0 +1,36 @@
+---
+import { author } from '../config';
+---
+
+<div class="author__profile" itemscope itemtype="http://schema.org/Person">
+  <div class="author__avatar">
+    <img src={`/images/${author.avatar}`} alt={author.name} loading="lazy" />
+  </div>
+  <div class="author__content">
+    <h3 class="author__name">{author.name}</h3>
+    <p class="author__bio">{author.bio}</p>
+  </div>
+  <ul class="author__urls">
+    {author.email && (
+      <li>
+        <a href={`mailto:${author.email}`}>
+          <i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email
+        </a>
+      </li>
+    )}
+    {author.github && (
+      <li>
+        <a href={`https://github.com/${author.github}`} target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
+        </a>
+      </li>
+    )}
+    {author.linkedin && (
+      <li>
+        <a href={`https://www.linkedin.com/in/${author.linkedin}`} target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+        </a>
+      </li>
+    )}
+  </ul>
+</div>
