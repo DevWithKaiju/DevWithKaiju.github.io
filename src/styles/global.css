@@ -591,7 +591,7 @@ a:hover {
    Publication Grid Components
    ============================================= */
 .pub-header {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: 500;
   margin-bottom: 3rem;
   border-bottom: 1px dashed var(--global-border-color);
@@ -742,7 +742,7 @@ html[data-theme="dark"] .page__inner-wrap {
 
 .page__title {
   font-family: 'Outfit', 'Noto Sans JP', sans-serif;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: 500;
   color: var(--global-text-color);
   margin-bottom: 2rem;
@@ -985,12 +985,11 @@ html[data-theme="dark"] .page__content blockquote {
 }
 
 .page__content strong {
-  font-weight: 500;
-  color: var(--primary-color-dark);
+  font-weight: 600;
 }
 
 html[data-theme="dark"] .page__content strong {
-  color: var(--primary-color-dark);
+  font-weight: 600;
 }
 
 .page__content pre {
