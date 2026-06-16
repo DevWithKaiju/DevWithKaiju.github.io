@@ -19,8 +19,18 @@ const {
   <h2>{title}</h2>
   <p set:html={message}></p>
   {showHomeLink && (
-    <a href="/" class="gallery-link" style="margin-top: 1.5rem;">
-      <i class="fas fa-home" style="font-size: 0.85em; margin-right: 0.2rem; color: var(--accent-color);"></i> トップページへ戻る &rarr;
+    <a href="/" class="gallery-link placeholder-link" style="margin-top: 1.5rem;">
+      <i class="fas fa-home home-icon" style="font-size: 0.85em; margin-right: 0.2rem;"></i> トップページへ戻る &rarr;
     </a>
   )}
 </div>
+
+<style>
+  .placeholder-link .home-icon {
+    color: var(--accent-color);
+    transition: color 0.3s ease;
+  }
+  .placeholder-link:hover .home-icon {
+    color: var(--primary-color);
+  }
+</style>
