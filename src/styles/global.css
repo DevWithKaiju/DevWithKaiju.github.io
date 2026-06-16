@@ -91,7 +91,7 @@ html[data-theme="dark"] .masthead {
 }
 
 .site-title {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   font-family: 'Outfit', 'Noto Sans JP', sans-serif;
   font-weight: 500;
   color: var(--global-text-color);
@@ -114,7 +114,7 @@ html[data-theme="dark"] .masthead {
 
 .masthead__nav a {
   font-weight: 400;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   padding: 0.5rem 0.75rem;
   color: var(--global-text-color);
   text-decoration: none;
