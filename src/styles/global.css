@@ -413,7 +413,7 @@ html[data-theme="dark"] .modern-card {
   border: 1px solid rgba(45, 212, 191, 0.2);
   padding: 0.4rem 1rem;
   border-radius: 30px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 400;
   display: inline-block;
   transition: all 0.2s ease;
