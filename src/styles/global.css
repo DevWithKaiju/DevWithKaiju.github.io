@@ -47,7 +47,7 @@ html[data-theme="dark"] {
 }
 
 html, body {
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100%;
   margin: 0;
   padding: 0;
