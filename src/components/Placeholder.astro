@@ -1,0 +1,26 @@
+---
+interface Props {
+  icon?: string;
+  title?: string;
+  message?: string;
+  showHomeLink?: boolean;
+}
+
+const { 
+  icon = "fas fa-paint-roller", 
+  title = "Under Construction", 
+  message = "現在準備中です！公開までもう少しお待ちください🐾",
+  showHomeLink = true
+} = Astro.props;
+---
+
+<div class="placeholder-page">
+  <i class={icon}></i>
+  <h2>{title}</h2>
+  <p set:html={message}></p>
+  {showHomeLink && (
+    <a href="/" class="gallery-link" style="margin-top: 1.5rem;">
+      <i class="fas fa-home" style="font-size: 0.85em; margin-right: 0.2rem;"></i> トップページへ戻る &rarr;
+    </a>
+  )}
+</div>

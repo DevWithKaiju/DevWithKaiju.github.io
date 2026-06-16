@@ -1,96 +1,71 @@
-# Academic Pages
-**Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
+# Mei Yoshikawa - Portfolio Website
 
-![Academic Pages template example](images/themes/homepage-light.png "Academic Pages template example")
+吉川 芽生（Mei Yoshikawa）の個人ポートフォリオサイトのリポジトリです。
+本サイトは [Astro](https://astro.build/) を使用して構築されており、GitHub Pages でホスティングされています。
 
-# Getting Started
+（旧バージョンは Jekyll / Academic Pages テンプレートを使用していましたが、現在は Astro ベースの独自構成に完全移行しています。）
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your public repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and add your content.
-1. Upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+## 開発・ローカル実行方法 (Running Locally)
 
-See more info at https://academicpages.github.io/
+本サイトを手元で動かしてプレビュー・開発するための手順です。
 
-## Running locally
+### 1. 必要な環境
+- Node.js (v18以降を推奨)
+- npm
 
-When you are initially working on your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
-
-1. Clone the repository and made updates as detailed above.
-
-### Using a different IDE
-1. Make sure you have ruby-dev, bundler, and nodejs installed
-    
-    On most Linux distribution and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
-    ```bash
-    sudo apt install ruby-dev ruby-bundler nodejs
-    ```
-    If you see error `Unable to locate package ruby-bundler`, `Unable to locate package nodejs `, run the following:
-    ```bash
-    sudo apt update && sudo apt upgrade -y
-    ```
-    then try run `sudo apt install ruby-dev ruby-bundler nodejs` again.
-
-    On MacOS the commands are:
-    ```bash
-    brew install ruby
-    brew install node
-    gem install bundler
-    ```
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-
-    If you see file permission error like `Fetching bundler-2.6.3.gem ERROR:  While executing gem (Gem::FilePermissionError) You don't have write permissions for the /var/lib/gems/3.2.0 directory.` or `Bundler::PermissionError: There was an error while trying to write to /usr/local/bin.`
-    Install Gems Locally (Recommended):
-    ```bash
-    bundle config set --local path 'vendor/bundle'
-    ```
-    then try run `bundle install` again. If succeeded, you should see a folder called `vendor` and `.bundle`.
-
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change to Markdown (*.md) and HTML files, while changes to the core template and configuration (i.e., `_config.yml`) will require stoping and restarting Jekyll.
-    You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
-
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
-
-## Using Docker
-
-Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.
-
-You can build and execute the container by running the following command in the repository:
-
+### 2. インストールと起動
 ```bash
-chmod -R 777 .
-docker compose up
+# 依存パッケージのインストール
+npm install
+
+# ローカルサーバーの起動
+npm run dev
 ```
+起動後、ブラウザで `http://localhost:4321` にアクセスすると、ローカルプレビューが確認できます。ファイル（`.astro` や `.md`）を編集して保存すると、自動的にブラウザがリロードされます。
 
-You should now be able to access the website from `localhost:4000`.
-
-### Using the DevContainer in VS Code
-
-If you are using [Visual Studio Code](https://code.visualstudio.com/) you can use the [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that comes with this Repository. Normally VS Code detects that a development container configuration is available and asks you if you want to use the container. If this doesn't happen you can manually start the container by **F1->DevContainer: Reopen in Container**. This restarts your VS Code in the container and automatically hosts your academic page locally on http://localhost:4000. All changes will be updated live to that page after a few seconds.
-
-# Maintenance
-
-Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
-
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii) and additional maintainers would be welcomed.
-
-## Bugfixes and enhancements
-
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of template to your fork as well.
-
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch.
+### 3. ビルドとデプロイ
+```bash
+# 本番用ビルドの生成（distフォルダに出力されます）
+npm run build
+```
+GitHub Actionsを使用してデプロイを自動化しているため、`main` ブランチに変更をプッシュするだけで自動的に公開されます。
 
 ---
-<div align="center">
-    
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
-[![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
-[![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
 
-[![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
-[![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+## サイトの編集マニュアル (Editing Manual)
+
+サイトの内容を更新・編集するためのガイドです。
+
+### プロフィールや全体設定の変更
+- **`src/config.ts`**:
+  サイトのタイトル、著者の基本情報（名前、メールアドレス、GitHub、LinkedInなどのSNSリンク）などの全体設定がまとまっています。ここを変更するだけでサイト全体の表記が一括で変わります。
+
+### 論文（Publications）の追加・編集
+論文データは `src/content/publications/` ディレクトリ内で Markdown ファイルとして管理されています。
+新しく論文を追加する場合は、このフォルダ内に Markdown ファイル（例：`2026-06-17-new-paper.md`）を作成してください。
+
+**フォーマット例**:
+```markdown
+---
+title: "論文や発表のタイトル"
+collection: "publications"
+date: 2026-06-17
+venue: "発表された学会やジャーナル名"
+paperurl: "https://doi.org/..."
+authors: "Mei Yoshikawa, Taro Yamada"
+---
+ここに概要（Abstract）や補足説明を書くことができます。
+```
+
+### 各ページの編集
+サイトの個別のページ構成や文章は `src/pages/` フォルダの中にある `.astro` ファイルを直接編集します。
+
+- **`src/pages/index.astro`**: トップページ。About Me（自己紹介文）、学歴、スキルなどの各セクションが記述されています。文章や経歴を追加する場合はここを編集してください。
+- **`src/pages/cv.astro`**: 履歴書（CV）ページ。学歴や資格、スキルなどのリストが記載されています。
+- **`src/pages/publications.astro`**: 論文一覧ページ。`src/content/publications/` 内のデータを自動で読み込んでギャラリー形式で表示します（見た目を変えたい場合のみ編集してください）。
+- **`src/pages/projects.astro` / `year-archive.astro`**: 現在は準備中（Under Construction）のページです。必要に応じてコンテンツを構築してください。
+
+### 画像の追加・差し替え
+- **`public/images/`**:
+  プロフィール画像や論文のサムネイル、ファビコンなどの静的画像はここに配置します。
+  例：プロフィール画像を差し替える場合は、新しい画像をここに追加し、`src/config.ts` の `avatar` プロパティのファイル名を変更するか、`index.astro` の画像パスを書き換えてください。
