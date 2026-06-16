@@ -6,9 +6,10 @@ interface Props {
   title?: string;
   description?: string;
   showTitle?: boolean;
+  isMarkdown?: boolean;
 }
 
-const { title, description, showTitle = true } = Astro.props;
+const { title, description, showTitle = true, isMarkdown = false } = Astro.props;
 ---
 
 <BaseLayout title={title} description={description}>
@@ -23,7 +24,7 @@ const { title, description, showTitle = true } = Astro.props;
             <h1 class="page__title">{title}</h1>
           </header>
         )}
-        <section class="page__content">
+        <section class={isMarkdown ? "page__content" : ""}>
           <slot />
         </section>
       </div>
