@@ -32,5 +32,12 @@ import { author } from '../config';
         </a>
       </li>
     )}
+    {author.orcid && (
+      <li>
+        <a href={`https://orcid.org/${author.orcid}`} target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-fw fa-orcid" aria-hidden="true"></i> ORCID
+        </a>
+      </li>
+    )}
   </ul>
 </div>

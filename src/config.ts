@@ -14,6 +14,7 @@ export const author = {
   email: 'lion.giraffe.may.2525@gmail.com',
   github: 'DevWithKaiju',
   linkedin: 'mei-yoshikawa',
+  orcid: '0009-0000-9041-7253',
 };
 
 export const navigation = [
