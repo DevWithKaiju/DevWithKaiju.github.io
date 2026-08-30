@@ -36,6 +36,15 @@ const publications = (await getCollection('publications')).sort(
   </section>
 
   <section class="modern-section">
+    <h2 class="section-title"><i class="fas fa-laptop-code"></i> スキル (Skills)</h2>
+    <div class="modern-card tags-card">
+      <span class="modern-tag"><span class="tag-part">Python</span> <span class="tag-part">(データ解析・機械学習・NLP)</span></span>
+      <a href="https://www.mizuno-group.com/" target="_blank" rel="noopener noreferrer" class="modern-tag"><span class="tag-part">Web 開発</span> <span class="tag-part">(研究室ウェブサイト制作)</span></a>
+      <span class="modern-tag"><span class="tag-part">GAS</span> <span class="tag-part">(業務改善)</span></span>
+    </div>
+  </section>
+
+  <section class="modern-section">
     <h2 class="section-title"><i class="fas fa-users"></i> 学会発表 (Conferences)</h2>
     <div class="modern-card">
       <ul class="timeline-list">
@@ -75,6 +84,13 @@ const publications = (await getCollection('publications')).sort(
           </div>
         </li>
       </ul>
+    </div>
+  </section>
+
+  <section class="modern-section">
+    <h2 class="section-title"><i class="fas fa-book-open"></i> 論文 (Publications)</h2>
+    <div class="modern-card">
+      <PublicationList publications={publications} />
     </div>
   </section>
 
@@ -144,15 +160,6 @@ const publications = (await getCollection('publications')).sort(
   </section>
 
   <section class="modern-section">
-    <h2 class="section-title"><i class="fas fa-laptop-code"></i> スキル (Skills)</h2>
-    <div class="modern-card tags-card">
-      <span class="modern-tag"><span class="tag-part">Python</span> <span class="tag-part">(データ解析・機械学習・NLP)</span></span>
-      <a href="https://www.mizuno-group.com/" target="_blank" rel="noopener noreferrer" class="modern-tag"><span class="tag-part">Web 開発</span> <span class="tag-part">(研究室ウェブサイト制作)</span></a>
-      <span class="modern-tag"><span class="tag-part">GAS</span> <span class="tag-part">(業務改善)</span></span>
-    </div>
-  </section>
-
-  <section class="modern-section">
     <h2 class="section-title"><i class="fas fa-certificate"></i> 資格 (Certifications)</h2>
     <div class="modern-card">
       <ul class="timeline-list certifications-list">
@@ -176,10 +183,4 @@ const publications = (await getCollection('publications')).sort(
     </div>
   </section>
 
-  <section class="modern-section">
-    <h2 class="section-title"><i class="fas fa-book-open"></i> 論文 (Publications)</h2>
-    <div class="modern-card">
-      <PublicationList publications={publications} />
-    </div>
-  </section>
 </SingleLayout>

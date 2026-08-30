@@ -26,15 +26,42 @@ const publications = (await getCollection('publications')).sort(
           <a href={`https://www.linkedin.com/in/${author.linkedin}`} class="hero-social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
           <a href={`https://orcid.org/${author.orcid}`} class="hero-social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-orcid"></i></a>
         </div>
+        <div style="margin-top: 1.5rem;">
+          <a href="/cv/" class="gallery-link" style="font-size: 1.05rem; font-weight: 500;"><i class="fas fa-file-alt"></i> 詳細な経歴（CV）はこちら &rarr;</a>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="modern-content-wrapper">
 
-    <div style="text-align: right; margin-bottom: 2rem;">
-      <a href="/cv/" class="gallery-link" style="font-size: 1.1rem; font-weight: 500;"><i class="fas fa-file-alt"></i> 詳細な経歴（CV）はこちら &rarr;</a>
-    </div>
+
+
+    <section class="modern-section">
+      <h2 class="section-title"><i class="fas fa-bullhorn"></i> News</h2>
+      <div class="modern-card">
+        <ul class="timeline-list">
+          <li>
+            <div class="timeline-date">2026/8</div>
+            <div class="timeline-content">
+              <strong>[Conference]</strong> IIBMP 2026にて「細胞間関係抽出に向けたコーパス開発とモデルの体系的評価」のポスター発表を行いました。
+            </div>
+          </li>
+          <li>
+            <div class="timeline-date">2025/12</div>
+            <div class="timeline-content">
+              <strong>[Conference]</strong> 第8回医薬品毒性機序研究会にて口頭発表を行いました。
+            </div>
+          </li>
+          <li>
+            <div class="timeline-date">2025/12</div>
+            <div class="timeline-content">
+              <strong>[Preprint]</strong> bioRxivにてプレプリント「<a href="https://doi.org/10.64898/2025.12.01.691726" target="_blank" rel="noopener noreferrer" class="hover-link">Defining and Evaluating Cell–Cell Relation Extraction from Biomedical Literature under Realistic Annotation Constraints</a>」を公開しました。
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
 
     <section class="modern-section">
       <h2 class="section-title"><i class="fas fa-laptop-code"></i> Skills</h2>
