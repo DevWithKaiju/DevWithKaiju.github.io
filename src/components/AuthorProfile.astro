@@ -39,5 +39,12 @@ import { author } from '../config';
         </a>
       </li>
     )}
+    {author.researchmap && (
+      <li>
+        <a href={`https://researchmap.jp/${author.researchmap}`} target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-fw fa-address-card" aria-hidden="true"></i> researchmap
+        </a>
+      </li>
+    )}
   </ul>
 </div>

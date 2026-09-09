@@ -15,6 +15,7 @@ export const author = {
   github: 'DevWithKaiju',
   linkedin: 'mei-yoshikawa',
   orcid: '0009-0000-9041-7253',
+  researchmap: 'DevWithKaiju',
 };
 
 export const navigation = [
