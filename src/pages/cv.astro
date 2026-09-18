@@ -45,6 +45,13 @@ const publications = (await getCollection('publications')).sort(
   </section>
 
   <section class="modern-section">
+    <h2 class="section-title"><i class="fas fa-book-open"></i> 論文 (Publications)</h2>
+    <div class="modern-card">
+      <PublicationList publications={publications} />
+    </div>
+  </section>
+
+  <section class="modern-section">
     <h2 class="section-title"><i class="fas fa-users"></i> 学会発表 (Conferences)</h2>
     <div class="modern-card">
       <ul class="timeline-list">
@@ -84,13 +91,6 @@ const publications = (await getCollection('publications')).sort(
           </div>
         </li>
       </ul>
-    </div>
-  </section>
-
-  <section class="modern-section">
-    <h2 class="section-title"><i class="fas fa-book-open"></i> 論文 (Publications)</h2>
-    <div class="modern-card">
-      <PublicationList publications={publications} />
     </div>
   </section>
 
