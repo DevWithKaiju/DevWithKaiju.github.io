@@ -497,41 +497,6 @@ html[data-theme="dark"] .modern-tag:hover {
   }
 }
 
-.cv-details {
-  margin-top: 0.4rem;
-}
-
-.cv-details summary {
-  cursor: pointer;
-  color: var(--global-text-color-light);
-  font-weight: 300;
-  list-style: none;
-}
-
-.cv-details summary::-webkit-details-marker {
-  display: none;
-}
-
-.cv-details summary::before {
-  content: '\25B8';
-  display: inline-block;
-  margin-right: 0.5rem;
-  color: var(--primary-color);
-  transition: transform 0.2s ease;
-}
-
-.cv-details[open] summary::before {
-  transform: rotate(90deg);
-}
-
-.cv-details-body {
-  margin: 0.6rem 0 0 1.3rem;
-  padding: 0;
-  color: var(--global-text-color-light);
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
 .clean-list {
   list-style: none;
   padding: 0;
