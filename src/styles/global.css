@@ -53,6 +53,17 @@ html, body {
   padding: 0;
 }
 
+/* 絶対配置の装飾（背景ブロブなど）が横幅をはみ出さないよう main で切り落とす */
+main {
+  position: relative;
+  overflow-x: clip;
+}
+@supports not (overflow-x: clip) {
+  main {
+    overflow-x: hidden;
+  }
+}
+
 body {
   font-family: 'Outfit', 'Noto Sans JP', sans-serif;
   font-size: 0.95rem;
@@ -196,6 +207,16 @@ html[data-theme="dark"] .masthead {
 
 html[data-theme="dark"] .background-blob {
   opacity: 0.3;
+}
+
+@media (max-width: 768px) {
+  .background-blob {
+    width: 300px;
+    height: 300px;
+    top: -60px;
+    right: -60px;
+    filter: blur(40px);
+  }
 }
 
 /* =============================================
@@ -360,7 +381,7 @@ html[data-theme="dark"] .modern-card {
    ============================================= */
 .modern-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 1.5rem;
 }
 
@@ -740,6 +761,12 @@ html[data-theme="dark"] .page__inner-wrap {
   border: 1px solid rgba(255,255,255,0.05);
 }
 
+@media (max-width: 768px) {
+  .page__inner-wrap {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
 .page__title {
   font-family: 'Outfit', 'Noto Sans JP', sans-serif;
   font-size: 1.8rem;
@@ -1014,6 +1041,24 @@ html[data-theme="dark"] .page__content pre {
 .page__content img {
   max-width: 100%;
   border-radius: 8px;
+}
+
+.page__content table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* 長い URL や英単語で横スクロールが発生しないよう折り返す */
+.page__content,
+.timeline-content,
+.item-title,
+.item-authors,
+.pub-title-grid,
+.pub-authors-grid,
+.hero-bio,
+.author__bio {
+  overflow-wrap: anywhere;
 }
 
 /* =============================================
