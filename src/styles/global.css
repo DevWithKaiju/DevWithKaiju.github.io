@@ -577,6 +577,41 @@ a:hover {
 }
 
 /* =============================================
+   Conference entry (collapsible)
+   ============================================= */
+.conf-entry summary {
+  cursor: pointer;
+  list-style: none;
+}
+.conf-entry summary::-webkit-details-marker {
+  display: none;
+}
+.conf-entry summary::marker {
+  display: none;
+}
+.conf-entry-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--global-text-color-light);
+}
+.conf-entry-toggle i {
+  font-size: 0.7rem;
+  transition: transform 0.2s ease;
+}
+.conf-entry[open] .conf-entry-toggle i {
+  transform: rotate(180deg);
+}
+.conf-entry-details {
+  margin-top: 0.6rem;
+  padding-top: 0.6rem;
+  border-top: 1px dashed var(--global-border-color);
+  font-size: 0.9rem;
+}
+
+/* =============================================
    Badges
    ============================================= */
 .badge {
