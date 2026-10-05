@@ -605,10 +605,31 @@ a:hover {
   transform: rotate(180deg);
 }
 .conf-entry-details {
-  margin-top: 0.6rem;
-  padding-top: 0.6rem;
-  border-top: 1px dashed var(--global-border-color);
-  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.7rem;
+  padding: 0.55rem 0.9rem;
+  background: var(--primary-color-light);
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+.conf-entry-details i {
+  color: var(--primary-color-dark);
+  font-size: 0.8rem;
+}
+.conf-entry-id {
+  margin-left: auto;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--primary-color-dark);
+  border: 1px solid var(--primary-color-dark);
+  padding: 0.1rem 0.5rem;
+  border-radius: 10px;
+  white-space: nowrap;
 }
 
 /* =============================================
