@@ -589,20 +589,40 @@ a:hover {
 .conf-entry summary::marker {
   display: none;
 }
+.conf-entry-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.conf-entry-main {
+  flex: 1;
+  min-width: 0;
+}
 .conf-entry-toggle {
-  display: inline-flex;
+  flex-shrink: 0;
+  display: flex;
   align-items: center;
-  gap: 0.3rem;
-  margin-left: 0.5rem;
-  font-size: 0.8rem;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-top: 0.15rem;
+  border-radius: 50%;
   color: var(--global-text-color-light);
+  font-size: 0.65rem;
+  transition: all 0.2s ease;
 }
 .conf-entry-toggle i {
-  font-size: 0.7rem;
   transition: transform 0.2s ease;
 }
 .conf-entry[open] .conf-entry-toggle i {
   transform: rotate(180deg);
+}
+.conf-entry summary:hover .conf-entry-toggle {
+  background: var(--global-border-color);
+  color: var(--global-text-color);
+}
+html[data-theme="dark"] .conf-entry summary:hover .conf-entry-toggle {
+  background: rgba(255,255,255,0.08);
 }
 .conf-entry-details {
   display: flex;
