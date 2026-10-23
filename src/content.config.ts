@@ -27,6 +27,7 @@ const posts = defineCollection({
     date: z.coerce.date(),
     permalink: z.string().optional(),
     tags: z.array(z.string()).optional(),
+    draft: z.boolean().optional(),
   }),
 });
 
